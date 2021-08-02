@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5885E512C3D5AB423C34D225 /* Pods_S_Life.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A499B7645C492E338471A49 /* Pods_S_Life.framework */; };
 		F79173F826B854B700E7DDCB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79173F726B854B700E7DDCB /* AppDelegate.swift */; };
 		F79173FC26B854B700E7DDCB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79173FB26B854B700E7DDCB /* ViewController.swift */; };
 		F79173FF26B854B700E7DDCB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F79173FD26B854B700E7DDCB /* Main.storyboard */; };
@@ -15,6 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		30C49C689268D730FC6C66D2 /* Pods-S-Life.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-S-Life.release.xcconfig"; path = "Target Support Files/Pods-S-Life/Pods-S-Life.release.xcconfig"; sourceTree = "<group>"; };
+		6A499B7645C492E338471A49 /* Pods_S_Life.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_S_Life.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECC9EFED3F9F77BDD5190B3C /* Pods-S-Life.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-S-Life.debug.xcconfig"; path = "Target Support Files/Pods-S-Life/Pods-S-Life.debug.xcconfig"; sourceTree = "<group>"; };
 		F79173F426B854B700E7DDCB /* S-Life.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "S-Life.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F79173F726B854B700E7DDCB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F79173FB26B854B700E7DDCB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +33,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5885E512C3D5AB423C34D225 /* Pods_S_Life.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8DD866C378900CC993D67284 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ECC9EFED3F9F77BDD5190B3C /* Pods-S-Life.debug.xcconfig */,
+				30C49C689268D730FC6C66D2 /* Pods-S-Life.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C7BFE3FA2C4F933DE3FEE649 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6A499B7645C492E338471A49 /* Pods_S_Life.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F79173EB26B854B700E7DDCB = {
 			isa = PBXGroup;
 			children = (
 				F79173F626B854B700E7DDCB /* S-Life */,
 				F79173F526B854B700E7DDCB /* Products */,
+				8DD866C378900CC993D67284 /* Pods */,
+				C7BFE3FA2C4F933DE3FEE649 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +96,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F791740826B854B800E7DDCB /* Build configuration list for PBXNativeTarget "S-Life" */;
 			buildPhases = (
+				7698DF6A3A68A4510E111E85 /* [CP] Check Pods Manifest.lock */,
 				F79173F026B854B700E7DDCB /* Sources */,
 				F79173F126B854B700E7DDCB /* Frameworks */,
 				F79173F226B854B700E7DDCB /* Resources */,
+				1D0E934D772FE9E641036998 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -128,6 +155,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1D0E934D772FE9E641036998 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-S-Life/Pods-S-Life-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-S-Life/Pods-S-Life-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-S-Life/Pods-S-Life-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7698DF6A3A68A4510E111E85 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-S-Life-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F79173F026B854B700E7DDCB /* Sources */ = {
@@ -279,6 +348,7 @@
 		};
 		F791740926B854B800E7DDCB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ECC9EFED3F9F77BDD5190B3C /* Pods-S-Life.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -297,6 +367,7 @@
 		};
 		F791740A26B854B800E7DDCB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 30C49C689268D730FC6C66D2 /* Pods-S-Life.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
