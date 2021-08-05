@@ -3,11 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		5885E512C3D5AB423C34D225 /* Pods_S_Life.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A499B7645C492E338471A49 /* Pods_S_Life.framework */; };
+		F742C2CB26BBFE1B001F6DC5 /* S-Life.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F742C2C926BBFE1B001F6DC5 /* S-Life.xcdatamodeld */; };
 		F79173F826B854B700E7DDCB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79173F726B854B700E7DDCB /* AppDelegate.swift */; };
 		F79173FC26B854B700E7DDCB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79173FB26B854B700E7DDCB /* ViewController.swift */; };
 		F79173FF26B854B700E7DDCB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F79173FD26B854B700E7DDCB /* Main.storyboard */; };
@@ -19,13 +20,14 @@
 		30C49C689268D730FC6C66D2 /* Pods-S-Life.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-S-Life.release.xcconfig"; path = "Target Support Files/Pods-S-Life/Pods-S-Life.release.xcconfig"; sourceTree = "<group>"; };
 		6A499B7645C492E338471A49 /* Pods_S_Life.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_S_Life.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECC9EFED3F9F77BDD5190B3C /* Pods-S-Life.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-S-Life.debug.xcconfig"; path = "Target Support Files/Pods-S-Life/Pods-S-Life.debug.xcconfig"; sourceTree = "<group>"; };
+		F742C2CA26BBFE1B001F6DC5 /* S-Life.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "S-Life.xcdatamodel"; sourceTree = "<group>"; };
 		F79173F426B854B700E7DDCB /* S-Life.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "S-Life.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F79173F726B854B700E7DDCB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F79173FB26B854B700E7DDCB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F79173FE26B854B700E7DDCB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F791740026B854B800E7DDCB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F791740326B854B800E7DDCB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		F791740526B854B800E7DDCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F791740526B854B800E7DDCB /* S-LifeInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "S-LifeInfo.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,7 +48,6 @@
 				ECC9EFED3F9F77BDD5190B3C /* Pods-S-Life.debug.xcconfig */,
 				30C49C689268D730FC6C66D2 /* Pods-S-Life.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -56,6 +57,73 @@
 				6A499B7645C492E338471A49 /* Pods_S_Life.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F742C2EA26BC0552001F6DC5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F742C2F226BC07EC001F6DC5 /* Design */,
+				F742C2F026BC07EC001F6DC5 /* Graphics */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F742C2EB26BC0552001F6DC5 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				F79173F726B854B700E7DDCB /* AppDelegate.swift */,
+				F742C2ED26BC066C001F6DC5 /* Controllers */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		F742C2EC26BC0552001F6DC5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F742C2C926BBFE1B001F6DC5 /* S-Life.xcdatamodeld */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F742C2ED26BC066C001F6DC5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F79173FB26B854B700E7DDCB /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		F742C2F026BC07EC001F6DC5 /* Graphics */ = {
+			isa = PBXGroup;
+			children = (
+				F791740026B854B800E7DDCB /* Assets.xcassets */,
+			);
+			path = Graphics;
+			sourceTree = "<group>";
+		};
+		F742C2F126BC07EC001F6DC5 /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				F791740226B854B800E7DDCB /* LaunchScreen.storyboard */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
+		F742C2F226BC07EC001F6DC5 /* Design */ = {
+			isa = PBXGroup;
+			children = (
+				F79173FD26B854B700E7DDCB /* Main.storyboard */,
+				F742C2F126BC07EC001F6DC5 /* Launch */,
+			);
+			path = Design;
+			sourceTree = "<group>";
+		};
+		F742C2F326BC0843001F6DC5 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				F791740526B854B800E7DDCB /* S-LifeInfo.plist */,
+			);
+			path = Configuration;
 			sourceTree = "<group>";
 		};
 		F79173EB26B854B700E7DDCB = {
@@ -79,12 +147,10 @@
 		F79173F626B854B700E7DDCB /* S-Life */ = {
 			isa = PBXGroup;
 			children = (
-				F79173F726B854B700E7DDCB /* AppDelegate.swift */,
-				F79173FB26B854B700E7DDCB /* ViewController.swift */,
-				F79173FD26B854B700E7DDCB /* Main.storyboard */,
-				F791740026B854B800E7DDCB /* Assets.xcassets */,
-				F791740226B854B800E7DDCB /* LaunchScreen.storyboard */,
-				F791740526B854B800E7DDCB /* Info.plist */,
+				F742C2F326BC0843001F6DC5 /* Configuration */,
+				F742C2EC26BC0552001F6DC5 /* Models */,
+				F742C2EA26BC0552001F6DC5 /* Resources */,
+				F742C2EB26BC0552001F6DC5 /* Source */,
 			);
 			path = "S-Life";
 			sourceTree = "<group>";
@@ -203,6 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F742C2CB26BBFE1B001F6DC5 /* S-Life.xcdatamodeld in Sources */,
 				F79173FC26B854B700E7DDCB /* ViewController.swift in Sources */,
 				F79173F826B854B700E7DDCB /* AppDelegate.swift in Sources */,
 			);
@@ -353,7 +420,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "S-Life/Info.plist";
+				INFOPLIST_FILE = "S-Life/Configuration/S-LifeInfo.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -372,7 +439,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "S-Life/Info.plist";
+				INFOPLIST_FILE = "S-Life/Configuration/S-LifeInfo.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -406,6 +473,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F742C2C926BBFE1B001F6DC5 /* S-Life.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F742C2CA26BBFE1B001F6DC5 /* S-Life.xcdatamodel */,
+			);
+			currentVersion = F742C2CA26BBFE1B001F6DC5 /* S-Life.xcdatamodel */;
+			path = "S-Life.xcdatamodeld";
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = F79173EC26B854B700E7DDCB /* Project object */;
 }
