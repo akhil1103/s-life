@@ -20,6 +20,16 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Montserrat-Medium.ttf</string>
+		<string>Montserrat-Light.ttf</string>
+		<string>Montserrat-Bold.ttf</string>
+		<string>Montserrat-ExtraLight.ttf</string>
+		<string>Montserrat-Regular.ttf</string>
+		<string>Montserrat-SemiBold.ttf</string>
+		<string>Montserrat-Thin.ttf</string>
+	</array>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
 	<key>UILaunchStoryboardName</key>
@@ -41,15 +51,13 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-    <key>UIAppFonts</key>
-    <array>
-        <string>Montserrat-Medium.ttf</string>
-        <string>Montserrat-Light.ttf</string>
-        <string>Montserrat-Bold.ttf</string>
-        <string>Montserrat-ExtraLight.ttf</string>
-        <string>Montserrat-Regular.ttf</string>
-        <string>Montserrat-SemiBold.ttf</string>
-        <string>Montserrat-Thin.ttf</string>
-    </array>
+	<key>LSApplicationCategoryType</key>
+	<string></string>
+	<key>com.apple.developer.networking.wifi-info</key>
+	<true/>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>requires location</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>needs location</string>
 </dict>
 </plist>

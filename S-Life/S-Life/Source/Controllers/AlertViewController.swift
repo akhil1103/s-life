@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AlertViewController: BaseViewController {
+class AlertViewController: BaseViewController, LocationManagerDelegate {
 
     @IBOutlet weak var topBarHight: NSLayoutConstraint!
     @IBOutlet weak var topSpaceToHeaderImageCosntraint: NSLayoutConstraint!
@@ -24,32 +24,33 @@ class AlertViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        LocationManager.shared.delegate = self
         topBarHight.constant = UIDevice.current.hasNotch ? 110 : 65
         topSpaceToHeaderImageCosntraint.constant = UIDevice.current.hasNotch ? 0 : 0
+        
         registerTableViewCells()
+        
         if connectedToInternet() {
             LoaderView.show()
             getSearchProjs()
         }
-        // Do any additional setup after loading the view.
     }
     
     fileprivate func registerTableViewCells() {
+        
         let nib = UINib(nibName: Constant.reUseIds.alertCellID, bundle: nil)
         alertsTableView.register(nib, forCellReuseIdentifier: Constant.reUseIds.alertCellID)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        if #available(iOS 15.0, *) {
-            let appearance = UINavigationBarAppearance()
-            appearance.configureWithOpaqueBackground()
-            appearance.backgroundColor = Constant.appColor
-            appearance.titleTextAttributes = [NSAttributedString.Key.font: Constant.appNavBarFont, NSAttributedString.Key.foregroundColor: UIColor.white]
-            
-            self.tabBarController?.navigationController?.navigationBar.tintColor = .white
-            self.tabBarController?.navigationController?.navigationBar.standardAppearance = appearance
-            self.tabBarController?.navigationController?.navigationBar.scrollEdgeAppearance = self.tabBarController?.navigationController?.navigationBar.standardAppearance
+        LocationManager.shared.requestLocationAuthorization()
+        getWifiInfo()
+    }
+    
+    @IBAction func connectButtonTapped(_ sender: Any) {
+        if let appSettings = URL(string: UIApplication.openSettingsURLString) {
+            UIApplication.shared.open(appSettings, options: [:], completionHandler: nil)
         }
     }
     
@@ -85,6 +86,26 @@ class AlertViewController: BaseViewController {
             self.showAlert(message: error.localizedDescription)
         }
     }
+    
+    func getWifiInfo() {
+        if Validate.connectedToSMCHotSpot() {
+            hotspotConnectionIndicationLabel.isHidden = false
+            notifyForHotspotConnectionView.isHidden = true
+            btnConnect.isHidden = true
+            btnNearestEva.isHidden = false
+        } else {
+            hotspotConnectionIndicationLabel.isHidden = true
+            notifyForHotspotConnectionView.isHidden = false
+            btnConnect.isHidden = false
+            btnNearestEva.isHidden = true
+        }
+    }
+    
+    func showLocationPermissionRequiredAlert() {
+        showAlert(message: CommonStrings.locationPermissionAlert) {
+            LocationManager.shared.requestLocationAuthorization()
+        }
+    }
 }
 
 extension AlertViewController: UITableViewDelegate, UITableViewDataSource {
@@ -103,9 +124,9 @@ extension AlertViewController: UITableViewDelegate, UITableViewDataSource {
         return UITableViewCell()
     }
     
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return 100
-//
+    //    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    //        return 100
+    //
     
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 1

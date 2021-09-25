@@ -48,6 +48,8 @@
 		F7EB96FA26FF3C72000D4EC0 /* AlertResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EB96F926FF3C72000D4EC0 /* AlertResponse.swift */; };
 		F7EB96FD26FF3FCD000D4EC0 /* LoaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7EB96FB26FF3FCD000D4EC0 /* LoaderView.xib */; };
 		F7EB96FE26FF3FCD000D4EC0 /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EB96FC26FF3FCD000D4EC0 /* LoaderView.swift */; };
+		F7EB970226FF60D2000D4EC0 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = F7EB970026FF60D2000D4EC0 /* Reachability.m */; };
+		F7EB970526FF8ABB000D4EC0 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EB970426FF8ABB000D4EC0 /* LocationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -96,6 +98,11 @@
 		F7EB96F926FF3C72000D4EC0 /* AlertResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertResponse.swift; sourceTree = "<group>"; };
 		F7EB96FB26FF3FCD000D4EC0 /* LoaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoaderView.xib; sourceTree = "<group>"; };
 		F7EB96FC26FF3FCD000D4EC0 /* LoaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoaderView.swift; sourceTree = "<group>"; };
+		F7EB96FF26FF60D1000D4EC0 /* S-Life-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "S-Life-Bridging-Header.h"; sourceTree = "<group>"; };
+		F7EB970026FF60D2000D4EC0 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		F7EB970126FF60D2000D4EC0 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		F7EB970326FF69E0000D4EC0 /* S-Life.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "S-Life.entitlements"; sourceTree = "<group>"; };
+		F7EB970426FF8ABB000D4EC0 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +147,8 @@
 		F742C2EB26BC0552001F6DC5 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				F7EB970126FF60D2000D4EC0 /* Reachability.h */,
+				F7EB970026FF60D2000D4EC0 /* Reachability.m */,
 				F7EB96F426FF35E3000D4EC0 /* CustomViews */,
 				F7EB96F126FEF857000D4EC0 /* MiscCustomViews */,
 				F7AEA21326FED4180041B93D /* Constants */,
@@ -150,6 +159,7 @@
 				F7AEA20826FED4180041B93D /* Services */,
 				F79173F726B854B700E7DDCB /* AppDelegate.swift */,
 				F742C2ED26BC066C001F6DC5 /* Controllers */,
+				F7EB96FF26FF60D1000D4EC0 /* S-Life-Bridging-Header.h */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -226,6 +236,7 @@
 		F79173F626B854B700E7DDCB /* S-Life */ = {
 			isa = PBXGroup;
 			children = (
+				F7EB970326FF69E0000D4EC0 /* S-Life.entitlements */,
 				F742C2F326BC0843001F6DC5 /* Configuration */,
 				F742C2EC26BC0552001F6DC5 /* Models */,
 				F742C2EA26BC0552001F6DC5 /* Resources */,
@@ -292,6 +303,7 @@
 			children = (
 				F7AEA21726FED4180041B93D /* Validator.swift */,
 				F7AEA21826FED4180041B93D /* AppManager.swift */,
+				F7EB970426FF8ABB000D4EC0 /* LocationManager.swift */,
 			);
 			path = Misc;
 			sourceTree = "<group>";
@@ -370,6 +382,7 @@
 				TargetAttributes = {
 					F79173F326B854B700E7DDCB = {
 						CreatedOnToolsVersion = 12.5.1;
+						LastSwiftMigration = 1300;
 					};
 				};
 			};
@@ -462,6 +475,7 @@
 			files = (
 				F7AEA22E26FED4180041B93D /* Constants.swift in Sources */,
 				F7AEA23026FED4180041B93D /* Validator.swift in Sources */,
+				F7EB970526FF8ABB000D4EC0 /* LocationManager.swift in Sources */,
 				F7AEA22D26FED4180041B93D /* UIViewController+Extension.swift in Sources */,
 				F7AEA22826FED4180041B93D /* UIColor+Extension.swift in Sources */,
 				F7AEA21F26FED4180041B93D /* Responses.swift in Sources */,
@@ -484,6 +498,7 @@
 				F7AEA22C26FED4180041B93D /* Double+Extension.swift in Sources */,
 				F7AEA21926FED4180041B93D /* SAnimatedUIButton.swift in Sources */,
 				F7AEA22726FED4180041B93D /* UIDevice+Extension.swift in Sources */,
+				F7EB970226FF60D2000D4EC0 /* Reachability.m in Sources */,
 				F7AEA22F26FED4180041B93D /* CommonStrings.swift in Sources */,
 				F79173F826B854B700E7DDCB /* AppDelegate.swift in Sources */,
 				F7EB96F026FEF82A000D4EC0 /* CardView.swift in Sources */,
@@ -635,17 +650,24 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "S-Life/S-Life.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 4J4C9KD6X6;
 				INFOPLIST_FILE = "S-Life/Configuration/S-LifeInfo.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "mobiapps.S-Life";
+				PRODUCT_BUNDLE_IDENTIFIER = "mobiapps.s-computer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "S-Computer Dev";
+				SWIFT_OBJC_BRIDGING_HEADER = "S-Life/Source/S-Life-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -655,17 +677,23 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "S-Life/S-Life.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 4J4C9KD6X6;
 				INFOPLIST_FILE = "S-Life/Configuration/S-LifeInfo.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "mobiapps.S-Life";
+				PRODUCT_BUNDLE_IDENTIFIER = "mobiapps.s-computer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "S-Computer Adhoc";
+				SWIFT_OBJC_BRIDGING_HEADER = "S-Life/Source/S-Life-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

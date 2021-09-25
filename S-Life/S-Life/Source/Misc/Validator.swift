@@ -7,7 +7,9 @@
 
 import Foundation
 import Alamofire
-class Validate {
+import SystemConfiguration.CaptiveNetwork
+
+class Validate: NSObject {
     static func email(email:String) -> Bool {
         let emailRegEx = CommonStrings.emailRegex
         let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
@@ -26,4 +28,51 @@ class Validate {
     static func  isConnectedToInternet() ->Bool {
             return NetworkReachabilityManager()!.isReachable
     }
+//    fileprivate static let SMC_WiFi_Name = "I_YELAGANA"
+    fileprivate static let SMC_WiFi_Name = "Bala"
+    static func connectedToSMCHotSpot() -> Bool {
+        if let wifiInfos = SSID.fetchNetworkInfo() {
+            for obj in wifiInfos {
+                if let wifiName = obj.ssid {
+                    if wifiName == SMC_WiFi_Name {
+                        return true
+                    }
+                }
+            }
+            return false
+        } else {
+            return false
+        }
+    }
+}
+
+public class SSID {
+ class func fetchNetworkInfo() -> [NetworkInfo]? {
+     if let interfaces: NSArray = CNCopySupportedInterfaces() {
+         var networkInfos = [NetworkInfo]()
+         for interface in interfaces {
+             let interfaceName = interface as! String
+             var networkInfo = NetworkInfo(interface: interfaceName,
+                                           success: false,
+                                           ssid: nil,
+                                           bssid: nil)
+             if let dict = CNCopyCurrentNetworkInfo(interfaceName as CFString) as NSDictionary? {
+                 networkInfo.success = true
+                 networkInfo.ssid = dict[kCNNetworkInfoKeySSID as String] as? String
+                 networkInfo.bssid = dict[kCNNetworkInfoKeyBSSID as String] as? String
+             }
+             networkInfos.append(networkInfo)
+         }
+         print(networkInfos)
+         return networkInfos
+     }
+     return nil
+   }
+ }
+
+struct NetworkInfo {
+    var interface: String
+    var success: Bool = false
+    var ssid: String?
+    var bssid: String?
 }

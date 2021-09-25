@@ -17,6 +17,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         sleep(2)
         return true
     }
-
 }
 
