@@ -117,24 +117,7 @@ class APIUtils: NSObject
             })
     }
     
-    internal func callApi(requestUrl : String, method: HTTPMethod, headers: [String : String]?, parameters: [String : AnyObject]?, success:@escaping (NSObject) -> (), failure: @escaping(NSError) -> ()) {
-        var requestApi: Alamofire.DataRequest?
-        requestApi = self.alamoFireManager.request(requestUrl, method: method, parameters: parameters, encoding: JSONEncoding.default, headers: headers)
-        requestApi!.validate(contentType: ["application/json"]).responseJSON(completionHandler: { (response: DataResponse) in
-            switch response.result{
-            case .success:
-                if let getModelObj = response.result.value as? NSObject{
-                    success(getModelObj)
-                }
-                break
-            case .failure(let error):
-                failure(error as NSError)
-                break
-            }
-        })
-    }
-    
-    internal func callPostLoginApi(requestUrl : String, method: HTTPMethod, parameters: [String : AnyObject]?, success:@escaping (NSObject, Data) -> (), failure: @escaping(NSError) -> ()) {
+    internal func callApi(requestUrl : String, method: HTTPMethod, parameters: [String : AnyObject]?, success:@escaping (NSObject, Data) -> (), failure: @escaping(NSError) -> ()) {
         var requestApi: Alamofire.DataRequest?
         let headers = ["Authorization" : APIUtils.apiUtilObj.currentSessionToken]
         requestApi = self.alamoFireManager.request(requestUrl, method: method, parameters: parameters, encoding: JSONEncoding.default, headers: headers)

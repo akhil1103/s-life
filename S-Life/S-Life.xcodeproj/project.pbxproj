@@ -10,7 +10,6 @@
 		5885E512C3D5AB423C34D225 /* Pods_S_Life.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A499B7645C492E338471A49 /* Pods_S_Life.framework */; };
 		F742C2CB26BBFE1B001F6DC5 /* S-Life.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F742C2C926BBFE1B001F6DC5 /* S-Life.xcdatamodeld */; };
 		F79173F826B854B700E7DDCB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79173F726B854B700E7DDCB /* AppDelegate.swift */; };
-		F79173FC26B854B700E7DDCB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79173FB26B854B700E7DDCB /* ViewController.swift */; };
 		F79173FF26B854B700E7DDCB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F79173FD26B854B700E7DDCB /* Main.storyboard */; };
 		F791740126B854B800E7DDCB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F791740026B854B800E7DDCB /* Assets.xcassets */; };
 		F791740426B854B800E7DDCB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F791740226B854B800E7DDCB /* LaunchScreen.storyboard */; };
@@ -39,6 +38,16 @@
 		F7AEA23F26FEDB250041B93D /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F7AEA23826FEDB250041B93D /* Montserrat-Bold.ttf */; };
 		F7AEA24026FEDB250041B93D /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F7AEA23926FEDB250041B93D /* Montserrat-SemiBold.ttf */; };
 		F7AEA24126FEDB250041B93D /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F7AEA23A26FEDB250041B93D /* Montserrat-Regular.ttf */; };
+		F7AEA24326FEE5560041B93D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AEA24226FEE5560041B93D /* BaseViewController.swift */; };
+		F7AEA24526FEEEFD0041B93D /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AEA24426FEEEFD0041B93D /* AlertViewController.swift */; };
+		F7AEA24726FEEF1F0041B93D /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AEA24626FEEF1F0041B93D /* MapViewController.swift */; };
+		F7EB96F026FEF82A000D4EC0 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EB96EF26FEF82A000D4EC0 /* CardView.swift */; };
+		F7EB96F326FEFF87000D4EC0 /* STabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EB96F226FEFF87000D4EC0 /* STabBar.swift */; };
+		F7EB96F726FF3601000D4EC0 /* AlertTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EB96F526FF3601000D4EC0 /* AlertTableViewCell.swift */; };
+		F7EB96F826FF3601000D4EC0 /* AlertTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7EB96F626FF3601000D4EC0 /* AlertTableViewCell.xib */; };
+		F7EB96FA26FF3C72000D4EC0 /* AlertResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EB96F926FF3C72000D4EC0 /* AlertResponse.swift */; };
+		F7EB96FD26FF3FCD000D4EC0 /* LoaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7EB96FB26FF3FCD000D4EC0 /* LoaderView.xib */; };
+		F7EB96FE26FF3FCD000D4EC0 /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EB96FC26FF3FCD000D4EC0 /* LoaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,7 +57,6 @@
 		F742C2CA26BBFE1B001F6DC5 /* S-Life.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "S-Life.xcdatamodel"; sourceTree = "<group>"; };
 		F79173F426B854B700E7DDCB /* S-Life.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "S-Life.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F79173F726B854B700E7DDCB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F79173FB26B854B700E7DDCB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F79173FE26B854B700E7DDCB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F791740026B854B800E7DDCB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F791740326B854B800E7DDCB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -78,6 +86,16 @@
 		F7AEA23826FEDB250041B93D /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
 		F7AEA23926FEDB250041B93D /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
 		F7AEA23A26FEDB250041B93D /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
+		F7AEA24226FEE5560041B93D /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		F7AEA24426FEEEFD0041B93D /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
+		F7AEA24626FEEF1F0041B93D /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		F7EB96EF26FEF82A000D4EC0 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		F7EB96F226FEFF87000D4EC0 /* STabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STabBar.swift; sourceTree = "<group>"; };
+		F7EB96F526FF3601000D4EC0 /* AlertTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertTableViewCell.swift; sourceTree = "<group>"; };
+		F7EB96F626FF3601000D4EC0 /* AlertTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertTableViewCell.xib; sourceTree = "<group>"; };
+		F7EB96F926FF3C72000D4EC0 /* AlertResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertResponse.swift; sourceTree = "<group>"; };
+		F7EB96FB26FF3FCD000D4EC0 /* LoaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoaderView.xib; sourceTree = "<group>"; };
+		F7EB96FC26FF3FCD000D4EC0 /* LoaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +140,8 @@
 		F742C2EB26BC0552001F6DC5 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				F7EB96F426FF35E3000D4EC0 /* CustomViews */,
+				F7EB96F126FEF857000D4EC0 /* MiscCustomViews */,
 				F7AEA21326FED4180041B93D /* Constants */,
 				F7AEA1FA26FED4180041B93D /* CustomClasses */,
 				F7AEA20B26FED4180041B93D /* Extensions */,
@@ -145,7 +165,9 @@
 		F742C2ED26BC066C001F6DC5 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				F79173FB26B854B700E7DDCB /* ViewController.swift */,
+				F7AEA24226FEE5560041B93D /* BaseViewController.swift */,
+				F7AEA24426FEEEFD0041B93D /* AlertViewController.swift */,
+				F7AEA24626FEEF1F0041B93D /* MapViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -220,6 +242,7 @@
 				F7AEA1FD26FED4180041B93D /* SDayButton.swift */,
 				F7AEA1FE26FED4180041B93D /* SPagingCollectionView.swift */,
 				F7AEA1FF26FED4180041B93D /* SRoundedButton.swift */,
+				F7EB96F226FEFF87000D4EC0 /* STabBar.swift */,
 			);
 			path = CustomClasses;
 			sourceTree = "<group>";
@@ -228,6 +251,7 @@
 			isa = PBXGroup;
 			children = (
 				F7AEA20226FED4180041B93D /* Responses.swift */,
+				F7EB96F926FF3C72000D4EC0 /* AlertResponse.swift */,
 			);
 			path = ServiceModel;
 			sourceTree = "<group>";
@@ -294,6 +318,25 @@
 			path = Montserrat;
 			sourceTree = "<group>";
 		};
+		F7EB96F126FEF857000D4EC0 /* MiscCustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				F7EB96EF26FEF82A000D4EC0 /* CardView.swift */,
+			);
+			path = MiscCustomViews;
+			sourceTree = "<group>";
+		};
+		F7EB96F426FF35E3000D4EC0 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				F7EB96FC26FF3FCD000D4EC0 /* LoaderView.swift */,
+				F7EB96FB26FF3FCD000D4EC0 /* LoaderView.xib */,
+				F7EB96F526FF3601000D4EC0 /* AlertTableViewCell.swift */,
+				F7EB96F626FF3601000D4EC0 /* AlertTableViewCell.xib */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -354,6 +397,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F7AEA23C26FEDB250041B93D /* Montserrat-Light.ttf in Resources */,
+				F7EB96FD26FF3FCD000D4EC0 /* LoaderView.xib in Resources */,
 				F7AEA23D26FEDB250041B93D /* Montserrat-ExtraLight.ttf in Resources */,
 				F791740426B854B800E7DDCB /* LaunchScreen.storyboard in Resources */,
 				F791740126B854B800E7DDCB /* Assets.xcassets in Resources */,
@@ -362,6 +406,7 @@
 				F7AEA24026FEDB250041B93D /* Montserrat-SemiBold.ttf in Resources */,
 				F79173FF26B854B700E7DDCB /* Main.storyboard in Resources */,
 				F7AEA24126FEDB250041B93D /* Montserrat-Regular.ttf in Resources */,
+				F7EB96F826FF3601000D4EC0 /* AlertTableViewCell.xib in Resources */,
 				F7AEA23E26FEDB250041B93D /* Montserrat-Thin.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -420,21 +465,28 @@
 				F7AEA22D26FED4180041B93D /* UIViewController+Extension.swift in Sources */,
 				F7AEA22826FED4180041B93D /* UIColor+Extension.swift in Sources */,
 				F7AEA21F26FED4180041B93D /* Responses.swift in Sources */,
+				F7EB96FA26FF3C72000D4EC0 /* AlertResponse.swift in Sources */,
 				F7AEA23126FED4180041B93D /* AppManager.swift in Sources */,
 				F7AEA21C26FED4180041B93D /* SPagingCollectionView.swift in Sources */,
+				F7AEA24526FEEEFD0041B93D /* AlertViewController.swift in Sources */,
 				F7AEA22526FED4180041B93D /* IService.swift in Sources */,
+				F7AEA24726FEEF1F0041B93D /* MapViewController.swift in Sources */,
 				F7AEA22926FED4180041B93D /* Int+Extension.swift in Sources */,
 				F7AEA21B26FED4180041B93D /* SDayButton.swift in Sources */,
 				F7AEA22626FED4180041B93D /* APIUtils.swift in Sources */,
+				F7EB96F326FEFF87000D4EC0 /* STabBar.swift in Sources */,
 				F7AEA22B26FED4180041B93D /* UIImage+Extension.swift in Sources */,
 				F742C2CB26BBFE1B001F6DC5 /* S-Life.xcdatamodeld in Sources */,
+				F7EB96FE26FF3FCD000D4EC0 /* LoaderView.swift in Sources */,
+				F7EB96F726FF3601000D4EC0 /* AlertTableViewCell.swift in Sources */,
+				F7AEA24326FEE5560041B93D /* BaseViewController.swift in Sources */,
 				F7AEA21A26FED4180041B93D /* SBorderedButton.swift in Sources */,
 				F7AEA22C26FED4180041B93D /* Double+Extension.swift in Sources */,
-				F79173FC26B854B700E7DDCB /* ViewController.swift in Sources */,
 				F7AEA21926FED4180041B93D /* SAnimatedUIButton.swift in Sources */,
 				F7AEA22726FED4180041B93D /* UIDevice+Extension.swift in Sources */,
 				F7AEA22F26FED4180041B93D /* CommonStrings.swift in Sources */,
 				F79173F826B854B700E7DDCB /* AppDelegate.swift in Sources */,
+				F7EB96F026FEF82A000D4EC0 /* CardView.swift in Sources */,
 				F7AEA21D26FED4180041B93D /* SRoundedButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

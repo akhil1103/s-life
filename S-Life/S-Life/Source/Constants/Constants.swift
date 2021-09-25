@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 class Constant {
-    static let base_url = "http://167.71.238.109:4300"
+    static let base_url = "http://167.71.238.109:4400"
     
     static let appNavBarFont = UIFont(name: Constant.AppFont.regular, size: 20)!
     
@@ -24,13 +24,14 @@ class Constant {
     }
     
     static let appColor = UIColor(red: 24.0/255.0, green: 51.0/255.0, blue: 90.0/255.0, alpha: 1)
+    static let appBGColor = UIColor.init(hex: "DBE5F1")
     
     struct Segue {
         
     }
     
     struct reUseIds {
-
+        static let alertCellID = "AlertTableViewCell"
     }
     
     struct StoryboardIDs {

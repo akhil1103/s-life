@@ -47,13 +47,13 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Project COW" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EOO-GV-tJM">
-                                        <rect key="frame" x="132.5" y="532.5" width="149" height="30"/>
+                                        <rect key="frame" x="122.5" y="532.5" width="169.5" height="31.5"/>
                                         <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="25.5"/>
                                         <color key="textColor" red="0.094117647060000004" green="0.20000000000000001" blue="0.35294117650000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Powered by Suzuki Innovation Center" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DiB-Lr-477">
-                                        <rect key="frame" x="93.5" y="567.5" width="227" height="16"/>
+                                        <rect key="frame" x="80.5" y="569" width="253.5" height="16"/>
                                         <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="13.5"/>
                                         <color key="textColor" red="0.094117647060000004" green="0.20000000000000001" blue="0.35294117650000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
@@ -77,12 +77,20 @@
                                     <constraint firstItem="H2k-He-t5a" firstAttribute="centerX" secondItem="qpg-ex-mYY" secondAttribute="centerX" id="w6O-y4-UNJ"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ubs-3R-wgp">
+                                <rect key="frame" x="0.0" y="862" width="414" height="34"/>
+                                <color key="backgroundColor" red="0.95713096860000002" green="0.97214776280000004" blue="0.99216049910000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" red="0.95713096860000002" green="0.97214776280000004" blue="0.99216049910000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.85882352941176465" green="0.89803921568627454" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Ubs-3R-wgp" secondAttribute="trailing" id="8eb-TR-u7r"/>
+                            <constraint firstAttribute="bottom" secondItem="Ubs-3R-wgp" secondAttribute="bottom" id="8pm-JG-Scv"/>
                             <constraint firstItem="qpg-ex-mYY" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="BCE-dV-5IF"/>
+                            <constraint firstItem="Ubs-3R-wgp" firstAttribute="top" secondItem="qpg-ex-mYY" secondAttribute="bottom" id="Ig7-HZ-jaW"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qpg-ex-mYY" secondAttribute="bottom" id="L4x-7v-5Ou"/>
+                            <constraint firstItem="Ubs-3R-wgp" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="LKQ-O9-dbu"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qpg-ex-mYY" secondAttribute="trailing" id="bVn-cq-hll"/>
                             <constraint firstItem="qpg-ex-mYY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="k4Z-hI-ad1"/>
                         </constraints>
