@@ -6,6 +6,7 @@ target 'S-Life' do
   use_frameworks!
 	pod 'Alamofire'
 	pod 'AlamofireObjectMapper', '~> 5.2'
+	pod 'Mapbox-iOS-SDK', '~> 6.3.0'
   # Pods for S-Life
 
 end

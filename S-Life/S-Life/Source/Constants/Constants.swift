@@ -35,7 +35,7 @@ class Constant {
     }
     
     struct StoryboardIDs {
-        
+        static let nearestEvacuationVC = "NearestEvacuationVC"
     }
     
     static let placeHolderProjImage = UIImage(named: "s-c-home-image-placeholder")

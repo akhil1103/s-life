@@ -44,14 +44,29 @@ class AlertViewController: BaseViewController, LocationManagerDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        if #available(iOS 15.0, *) {
+            let appearance = UINavigationBarAppearance()
+            appearance.configureWithOpaqueBackground()
+            appearance.backgroundColor = Constant.appColor
+            appearance.titleTextAttributes = [NSAttributedString.Key.font: Constant.appNavBarFont, NSAttributedString.Key.foregroundColor: UIColor.white]
+            
+            self.tabBarController?.navigationController?.navigationBar.tintColor = .white
+            self.tabBarController?.navigationController?.navigationBar.standardAppearance = appearance
+            self.tabBarController?.navigationController?.navigationBar.scrollEdgeAppearance = self.tabBarController?.navigationController?.navigationBar.standardAppearance
+        }
         LocationManager.shared.requestLocationAuthorization()
         getWifiInfo()
     }
     
     @IBAction func connectButtonTapped(_ sender: Any) {
-        if let appSettings = URL(string: UIApplication.openSettingsURLString) {
-            UIApplication.shared.open(appSettings, options: [:], completionHandler: nil)
+        DispatchQueue.main.async {
+            let dashboardVC = self.storyboard?.instantiateViewController(withIdentifier: Constant.StoryboardIDs.nearestEvacuationVC) as? NearestEvacuationVC
+            self.navigationController?.pushViewController(dashboardVC!, animated: true)
+            self.navigationController?.setNavigationBarHidden(false, animated: false)
         }
+//        if let appSettings = URL(string: UIApplication.openSettingsURLString) {
+//            UIApplication.shared.open(appSettings, options: [:], completionHandler: nil)
+//        }
     }
     
     //MARK:- API CALLS

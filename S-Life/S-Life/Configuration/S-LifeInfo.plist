@@ -18,8 +18,16 @@
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>LSApplicationCategoryType</key>
+	<string></string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>MGLMapboxAccessToken</key>
+	<string>pk.eyJ1IjoiYW1pdHRhbDc3NiIsImEiOiJja3JuNmVydHMxeHJxMnZvNTRuamE3djZ1In0.v39uC2TNUtzsIvFMvlL7ZQ</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>requires location</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>needs location</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Montserrat-Medium.ttf</string>
@@ -51,13 +59,7 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>LSApplicationCategoryType</key>
-	<string></string>
 	<key>com.apple.developer.networking.wifi-info</key>
 	<true/>
-	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>requires location</string>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>needs location</string>
 </dict>
 </plist>

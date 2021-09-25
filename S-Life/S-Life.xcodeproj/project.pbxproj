@@ -50,6 +50,7 @@
 		F7EB96FE26FF3FCD000D4EC0 /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EB96FC26FF3FCD000D4EC0 /* LoaderView.swift */; };
 		F7EB970226FF60D2000D4EC0 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = F7EB970026FF60D2000D4EC0 /* Reachability.m */; };
 		F7EB970526FF8ABB000D4EC0 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EB970426FF8ABB000D4EC0 /* LocationManager.swift */; };
+		F7EB970726FF9070000D4EC0 /* NearestEvacuationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EB970626FF9070000D4EC0 /* NearestEvacuationVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -103,6 +104,7 @@
 		F7EB970126FF60D2000D4EC0 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		F7EB970326FF69E0000D4EC0 /* S-Life.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "S-Life.entitlements"; sourceTree = "<group>"; };
 		F7EB970426FF8ABB000D4EC0 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		F7EB970626FF9070000D4EC0 /* NearestEvacuationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearestEvacuationVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +180,7 @@
 				F7AEA24226FEE5560041B93D /* BaseViewController.swift */,
 				F7AEA24426FEEEFD0041B93D /* AlertViewController.swift */,
 				F7AEA24626FEEF1F0041B93D /* MapViewController.swift */,
+				F7EB970626FF9070000D4EC0 /* NearestEvacuationVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -497,6 +500,7 @@
 				F7AEA21A26FED4180041B93D /* SBorderedButton.swift in Sources */,
 				F7AEA22C26FED4180041B93D /* Double+Extension.swift in Sources */,
 				F7AEA21926FED4180041B93D /* SAnimatedUIButton.swift in Sources */,
+				F7EB970726FF9070000D4EC0 /* NearestEvacuationVC.swift in Sources */,
 				F7AEA22726FED4180041B93D /* UIDevice+Extension.swift in Sources */,
 				F7EB970226FF60D2000D4EC0 /* Reachability.m in Sources */,
 				F7AEA22F26FED4180041B93D /* CommonStrings.swift in Sources */,
@@ -655,6 +659,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 4J4C9KD6X6;
+				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "S-Life/Configuration/S-LifeInfo.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -682,6 +687,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 4J4C9KD6X6;
+				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "S-Life/Configuration/S-LifeInfo.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
