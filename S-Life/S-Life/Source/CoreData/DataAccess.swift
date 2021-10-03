@@ -97,6 +97,15 @@ public class DataAccess {
         return fetchObjectMatchingPredicate(predicate)
     }
     
+    public func deleteObject<T>(
+        _ object: T!
+        ) -> Bool where T: BaseModelObject, T: NSManagedObject {
+        
+        let thisContext = getContext()
+        thisContext.delete(object)
+        return true
+    }
+    
     public func fetchObjectMatchingPredicate<T>(
         _ predicate: NSPredicate,
         sortDescriptors:[NSSortDescriptor]? = nil
@@ -110,6 +119,25 @@ public class DataAccess {
         fetch.fetchLimit = 1
         
         return (try? context.fetch(fetch))?.first
+    }
+    
+    public func fetchObjectsMatchingPredicate<T>(
+        _ predicate: NSPredicate,
+        sortDescriptors:[NSSortDescriptor]? = nil
+    ) -> [T]?  where T: BaseModelObject, T: NSManagedObject {
+        
+        let context = getContext()
+        let fetch = NSFetchRequest<T>(entityName: T.entityName())
+        fetch.includesSubentities = false
+        fetch.predicate = predicate
+        fetch.sortDescriptors = sortDescriptors
+        
+        do {
+            let result = try context.fetch(fetch)
+            return result
+        } catch {
+            return []
+        }
     }
     
 }

@@ -169,49 +169,91 @@
                                 <color key="textColor" red="0.14901960780000001" green="0.2274509804" blue="0.35294117650000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Omq-YW-Wf7" customClass="CardView" customModule="S_Life" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q1p-dD-sgn" customClass="CardView" customModule="S_Life" customModuleProvider="target">
+                                <rect key="frame" x="10" y="154.66666666666666" width="394" height="74.333333333333343"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Omq-YW-Wf7">
                                 <rect key="frame" x="10" y="154.66666666666666" width="394" height="74.333333333333343"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Earthquake forecasted" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eVe-ij-AiR">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Earthquake forecasted" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eVe-ij-AiR">
                                         <rect key="frame" x="10" y="9.9999999999999982" width="374" height="17.333333333333329"/>
                                         <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="14"/>
                                         <color key="textColor" red="0.094117647060000004" green="0.20000000000000001" blue="0.35294117650000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Earthquake forecasted" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="56t-NW-JkJ">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Alert" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="niL-Zb-Ic4">
+                                        <rect key="frame" x="10" y="28.666666666666686" width="374" height="17.333333333333329"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="14"/>
+                                        <color key="textColor" red="0.094117647060000004" green="0.20000000000000001" blue="0.35294117650000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Earthquake forecasted" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="56t-NW-JkJ">
                                         <rect key="frame" x="10" y="32.333333333333343" width="374" height="12.333333333333336"/>
                                         <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="10"/>
                                         <color key="textColor" red="0.094117647060000004" green="0.20000000000000001" blue="0.35294117650000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g07-nt-2QP">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g07-nt-2QP">
                                         <rect key="frame" x="10" y="49.666666666666686" width="374" height="14.666666666666671"/>
                                         <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="12"/>
                                         <color key="textColor" red="0.14901960780000001" green="0.2274509804" blue="0.35294117650000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Buq-La-tYM">
+                                        <rect key="frame" x="343" y="-10" width="61" height="30"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Latest" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oyJ-HQ-pqI">
+                                                <rect key="frame" x="10" y="12.666666666666686" width="31" height="12.333333333333336"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="10"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.14901960780000001" green="0.2274509804" blue="0.35294117650000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="oyJ-HQ-pqI" secondAttribute="bottom" constant="5" id="4e7-Bd-yvO"/>
+                                            <constraint firstAttribute="height" constant="30" id="SLy-K9-Scy"/>
+                                            <constraint firstItem="oyJ-HQ-pqI" firstAttribute="leading" secondItem="Buq-La-tYM" secondAttribute="leading" constant="10" id="X7C-Rj-eCb"/>
+                                            <constraint firstAttribute="trailing" secondItem="oyJ-HQ-pqI" secondAttribute="trailing" constant="20" id="wk7-hd-5tb"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.91803598399999997" green="0.94061571359999996" blue="0.96863228079999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="niL-Zb-Ic4" secondAttribute="trailing" constant="10" id="0dL-Uo-1n9"/>
                                     <constraint firstAttribute="trailing" secondItem="g07-nt-2QP" secondAttribute="trailing" constant="10" id="1fX-8I-Urm"/>
                                     <constraint firstAttribute="trailing" secondItem="56t-NW-JkJ" secondAttribute="trailing" constant="10" id="6ea-PA-Be2"/>
                                     <constraint firstAttribute="bottom" secondItem="g07-nt-2QP" secondAttribute="bottom" constant="10" id="9FL-hN-bTq"/>
+                                    <constraint firstItem="niL-Zb-Ic4" firstAttribute="centerX" secondItem="Omq-YW-Wf7" secondAttribute="centerX" id="AJK-P1-JAL"/>
                                     <constraint firstItem="56t-NW-JkJ" firstAttribute="leading" secondItem="Omq-YW-Wf7" secondAttribute="leading" constant="10" id="DPe-RP-C2z"/>
                                     <constraint firstAttribute="trailing" secondItem="eVe-ij-AiR" secondAttribute="trailing" constant="10" id="DPs-Ok-14c"/>
+                                    <constraint firstItem="Buq-La-tYM" firstAttribute="top" secondItem="Omq-YW-Wf7" secondAttribute="top" constant="-10" id="PHR-bI-KpP"/>
+                                    <constraint firstAttribute="trailing" secondItem="Buq-La-tYM" secondAttribute="trailing" constant="-10" id="Uv4-xr-Hwc"/>
                                     <constraint firstItem="eVe-ij-AiR" firstAttribute="leading" secondItem="Omq-YW-Wf7" secondAttribute="leading" constant="10" id="V3d-LB-xn8"/>
+                                    <constraint firstItem="niL-Zb-Ic4" firstAttribute="leading" secondItem="Omq-YW-Wf7" secondAttribute="leading" constant="10" id="dIs-xi-6Zc"/>
                                     <constraint firstItem="56t-NW-JkJ" firstAttribute="top" secondItem="eVe-ij-AiR" secondAttribute="bottom" constant="5" id="iqT-vd-KLS"/>
                                     <constraint firstItem="eVe-ij-AiR" firstAttribute="top" secondItem="Omq-YW-Wf7" secondAttribute="top" constant="10" id="klU-Si-VBc"/>
                                     <constraint firstItem="g07-nt-2QP" firstAttribute="leading" secondItem="Omq-YW-Wf7" secondAttribute="leading" constant="10" id="nl8-aR-Glw"/>
+                                    <constraint firstItem="niL-Zb-Ic4" firstAttribute="centerY" secondItem="Omq-YW-Wf7" secondAttribute="centerY" id="oCs-5o-73p"/>
                                     <constraint firstItem="g07-nt-2QP" firstAttribute="top" secondItem="56t-NW-JkJ" secondAttribute="bottom" constant="5" id="vEG-dc-fT9"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="10" id="x1M-5Y-Voi"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <real key="value" value="6"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOffsetHeight">
-                                        <integer key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X6j-8g-zto" customClass="CardView" customModule="S_Life" customModuleProvider="target">
@@ -246,7 +288,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x85-51-ucb" customClass="SRoundedButton" customModule="S_Computer" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x85-51-ucb" customClass="SRoundedButton" customModule="S_Life" customModuleProvider="target">
                                 <rect key="frame" x="92" y="259" width="230" height="50"/>
                                 <color key="backgroundColor" red="0.094117647060000004" green="0.20000000000000001" blue="0.35294117650000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
@@ -264,8 +306,11 @@
                                         <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="nearestEvacuationBtnTapped:" destination="v6g-FM-SGt" eventType="touchUpInside" id="5iO-GU-mP6"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rmk-W4-niK" customClass="SRoundedButton" customModule="S_Computer" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rmk-W4-niK" customClass="SRoundedButton" customModule="S_Life" customModuleProvider="target">
                                 <rect key="frame" x="127" y="259" width="160" height="50"/>
                                 <color key="backgroundColor" red="0.094117647060000004" green="0.20000000000000001" blue="0.35294117650000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
@@ -379,6 +424,7 @@
                         <viewLayoutGuide key="safeArea" id="9x7-XA-Sy7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="q1p-dD-sgn" firstAttribute="bottom" secondItem="Omq-YW-Wf7" secondAttribute="bottom" id="0RF-6C-91c"/>
                             <constraint firstItem="9x7-XA-Sy7" firstAttribute="trailing" secondItem="Omq-YW-Wf7" secondAttribute="trailing" constant="10" id="16g-8p-cRM"/>
                             <constraint firstItem="X6j-8g-zto" firstAttribute="top" secondItem="Omq-YW-Wf7" secondAttribute="top" id="1iq-nC-GUy"/>
                             <constraint firstItem="gNN-ER-bvX" firstAttribute="bottom" secondItem="3BQ-44-F2B" secondAttribute="bottom" constant="-5" id="3AD-Pk-TWw"/>
@@ -399,16 +445,19 @@
                             <constraint firstItem="20X-oY-rEX" firstAttribute="top" secondItem="w7O-rn-0WE" secondAttribute="top" id="Peo-Vz-ZND"/>
                             <constraint firstItem="20X-oY-rEX" firstAttribute="trailing" secondItem="w7O-rn-0WE" secondAttribute="trailing" id="QMk-jt-0YC"/>
                             <constraint firstItem="w7O-rn-0WE" firstAttribute="top" secondItem="6ka-oS-9uW" secondAttribute="bottom" constant="15" id="ROT-p8-3yS"/>
+                            <constraint firstItem="q1p-dD-sgn" firstAttribute="top" secondItem="Omq-YW-Wf7" secondAttribute="top" id="TbL-Zw-Sgi"/>
                             <constraint firstItem="eWc-0Q-5QZ" firstAttribute="leading" secondItem="9x7-XA-Sy7" secondAttribute="leading" constant="15" id="Vfa-rK-k8V"/>
                             <constraint firstItem="6ka-oS-9uW" firstAttribute="leading" secondItem="9x7-XA-Sy7" secondAttribute="leading" constant="10" id="WGT-Qw-XsX"/>
                             <constraint firstItem="X6j-8g-zto" firstAttribute="leading" secondItem="Omq-YW-Wf7" secondAttribute="leading" id="XDp-py-9SS"/>
                             <constraint firstItem="Omq-YW-Wf7" firstAttribute="leading" secondItem="9x7-XA-Sy7" secondAttribute="leading" constant="10" id="YW8-3e-S0a"/>
                             <constraint firstItem="3BQ-44-F2B" firstAttribute="leading" secondItem="9x7-XA-Sy7" secondAttribute="leading" id="cZd-9w-fnU"/>
                             <constraint firstItem="x85-51-ucb" firstAttribute="centerX" secondItem="zml-s3-RLw" secondAttribute="centerX" id="eFr-cR-aYi"/>
+                            <constraint firstItem="q1p-dD-sgn" firstAttribute="trailing" secondItem="Omq-YW-Wf7" secondAttribute="trailing" id="eMs-gA-i5s"/>
                             <constraint firstItem="w7O-rn-0WE" firstAttribute="leading" secondItem="9x7-XA-Sy7" secondAttribute="leading" constant="10" id="gcJ-pG-2CD"/>
                             <constraint firstItem="x85-51-ucb" firstAttribute="top" secondItem="Omq-YW-Wf7" secondAttribute="bottom" constant="30" id="hqb-Ks-MIJ"/>
                             <constraint firstItem="9x7-XA-Sy7" firstAttribute="trailing" secondItem="w7O-rn-0WE" secondAttribute="trailing" constant="10" id="jWZ-ew-V1Q"/>
                             <constraint firstItem="9x7-XA-Sy7" firstAttribute="bottom" secondItem="w7O-rn-0WE" secondAttribute="bottom" constant="15" id="jnf-yO-GM5"/>
+                            <constraint firstItem="q1p-dD-sgn" firstAttribute="leading" secondItem="Omq-YW-Wf7" secondAttribute="leading" id="nNZ-Di-eFc"/>
                             <constraint firstItem="9x7-XA-Sy7" firstAttribute="trailing" secondItem="eWc-0Q-5QZ" secondAttribute="trailing" constant="15" id="pKY-2J-4Wx"/>
                             <constraint firstItem="X6j-8g-zto" firstAttribute="trailing" secondItem="Omq-YW-Wf7" secondAttribute="trailing" id="yQP-zE-7Si"/>
                         </constraints>
@@ -425,6 +474,12 @@
                         <outlet property="btnConnect" destination="Rmk-W4-niK" id="Q1o-2P-SNs"/>
                         <outlet property="btnNearestEva" destination="x85-51-ucb" id="TSq-4m-uq8"/>
                         <outlet property="hotspotConnectionIndicationLabel" destination="eWc-0Q-5QZ" id="BtZ-zo-yBN"/>
+                        <outlet property="latestAlertCategory" destination="56t-NW-JkJ" id="P8m-A1-cb7"/>
+                        <outlet property="latestAlertDesc" destination="g07-nt-2QP" id="swX-Wd-LcR"/>
+                        <outlet property="latestAlertTagView" destination="Buq-La-tYM" id="E6G-K0-Flv"/>
+                        <outlet property="latestAlertTitleLabel" destination="eVe-ij-AiR" id="Ppl-cb-nPg"/>
+                        <outlet property="localAlertMainView" destination="20X-oY-rEX" id="5Pd-By-c9U"/>
+                        <outlet property="noLatestAlertLabel" destination="niL-Zb-Ic4" id="Mmv-bV-Yxb"/>
                         <outlet property="noLocalAlertsView" destination="w7O-rn-0WE" id="y3N-oG-kQW"/>
                         <outlet property="notifyForHotspotConnectionView" destination="X6j-8g-zto" id="suW-dh-lTF"/>
                         <outlet property="topBarHight" destination="9IR-wM-pM5" id="Kvw-24-qSJ"/>

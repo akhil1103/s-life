@@ -15,6 +15,8 @@ class NearestEvacuationVC: UIViewController, MGLMapViewDelegate {
     var progressView: UIProgressView!
     var mapView: MGLMapView!
 
+    var location: Location?
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -24,7 +26,7 @@ class NearestEvacuationVC: UIViewController, MGLMapViewDelegate {
         mapView.delegate = self
         mapParentView.addSubview(mapView)
 
-        mapView.setCenter(CLLocationCoordinate2D(latitude: 17.3840, longitude: 78.4867),
+        mapView.setCenter(CLLocationCoordinate2D(latitude: location?.lat ?? 0.0, longitude: location?.long ?? 0.0),
                           zoomLevel: 9, animated: false)
 
         // Setup offline pack notification handlers.
@@ -52,7 +54,7 @@ class NearestEvacuationVC: UIViewController, MGLMapViewDelegate {
     
     func mapView(_ mapView: MGLMapView, didFinishLoading style: MGLStyle) {
         let point = MGLPointAnnotation()
-        point.coordinate = CLLocationCoordinate2D(latitude: 17.2402633, longitude: 78.42938509999999)
+        point.coordinate = CLLocationCoordinate2D(latitude: location?.lat ?? 0.0, longitude: location?.long ?? 0.0)
          
         // Create a data source to hold the point data
         let shapeSource = MGLShapeSource(identifier: "marker-source", shape: point, options: nil)

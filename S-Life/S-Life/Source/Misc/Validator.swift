@@ -28,9 +28,13 @@ class Validate: NSObject {
     static func  isConnectedToInternet() ->Bool {
             return NetworkReachabilityManager()!.isReachable
     }
-//    fileprivate static let SMC_WiFi_Name = "I_YELAGANA"
-    fileprivate static let SMC_WiFi_Name = "Bala"
+    
+    fileprivate static let mockWifiEnabled = false
+    fileprivate static let SMC_WiFi_Name = "SMC_HotSpot"
     static func connectedToSMCHotSpot() -> Bool {
+        if Validate.mockWifiEnabled {
+            return true
+        }
         if let wifiInfos = SSID.fetchNetworkInfo() {
             for obj in wifiInfos {
                 if let wifiName = obj.ssid {
