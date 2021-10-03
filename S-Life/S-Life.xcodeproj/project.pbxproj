@@ -9,10 +9,16 @@
 /* Begin PBXBuildFile section */
 		5885E512C3D5AB423C34D225 /* Pods_S_Life.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A499B7645C492E338471A49 /* Pods_S_Life.framework */; };
 		F742C2CB26BBFE1B001F6DC5 /* S-Life.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F742C2C926BBFE1B001F6DC5 /* S-Life.xcdatamodeld */; };
+		F78540542708A51A0003882C /* ModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78540532708A51A0003882C /* ModelManager.swift */; };
+		F78540742708A8E40003882C /* NSManagedObjectContext+Save.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78540732708A8E40003882C /* NSManagedObjectContext+Save.swift */; };
 		F79173F826B854B700E7DDCB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79173F726B854B700E7DDCB /* AppDelegate.swift */; };
 		F79173FF26B854B700E7DDCB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F79173FD26B854B700E7DDCB /* Main.storyboard */; };
 		F791740126B854B800E7DDCB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F791740026B854B800E7DDCB /* Assets.xcassets */; };
 		F791740426B854B800E7DDCB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F791740226B854B800E7DDCB /* LaunchScreen.storyboard */; };
+		F797F3672709D42E00A5CB4F /* NSManagedObject+Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = F797F3662709D42E00A5CB4F /* NSManagedObject+Name.swift */; };
+		F797F36C2709EE4E00A5CB4F /* SLifeAlertEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F797F36B2709EE4E00A5CB4F /* SLifeAlertEntity+CoreDataProperties.swift */; };
+		F797F36E2709EE6800A5CB4F /* SLifeAlertEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F797F36D2709EE6800A5CB4F /* SLifeAlertEntity+CoreDataClass.swift */; };
+		F797F3702709EFDA00A5CB4F /* DataAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = F797F36F2709EFDA00A5CB4F /* DataAccess.swift */; };
 		F7AEA21926FED4180041B93D /* SAnimatedUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AEA1FB26FED4180041B93D /* SAnimatedUIButton.swift */; };
 		F7AEA21A26FED4180041B93D /* SBorderedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AEA1FC26FED4180041B93D /* SBorderedButton.swift */; };
 		F7AEA21B26FED4180041B93D /* SDayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AEA1FD26FED4180041B93D /* SDayButton.swift */; };
@@ -48,7 +54,6 @@
 		F7EB96FA26FF3C72000D4EC0 /* AlertResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EB96F926FF3C72000D4EC0 /* AlertResponse.swift */; };
 		F7EB96FD26FF3FCD000D4EC0 /* LoaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7EB96FB26FF3FCD000D4EC0 /* LoaderView.xib */; };
 		F7EB96FE26FF3FCD000D4EC0 /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EB96FC26FF3FCD000D4EC0 /* LoaderView.swift */; };
-		F7EB970226FF60D2000D4EC0 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = F7EB970026FF60D2000D4EC0 /* Reachability.m */; };
 		F7EB970526FF8ABB000D4EC0 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EB970426FF8ABB000D4EC0 /* LocationManager.swift */; };
 		F7EB970726FF9070000D4EC0 /* NearestEvacuationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EB970626FF9070000D4EC0 /* NearestEvacuationVC.swift */; };
 /* End PBXBuildFile section */
@@ -58,12 +63,18 @@
 		6A499B7645C492E338471A49 /* Pods_S_Life.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_S_Life.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECC9EFED3F9F77BDD5190B3C /* Pods-S-Life.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-S-Life.debug.xcconfig"; path = "Target Support Files/Pods-S-Life/Pods-S-Life.debug.xcconfig"; sourceTree = "<group>"; };
 		F742C2CA26BBFE1B001F6DC5 /* S-Life.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "S-Life.xcdatamodel"; sourceTree = "<group>"; };
+		F78540532708A51A0003882C /* ModelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelManager.swift; sourceTree = "<group>"; };
+		F78540732708A8E40003882C /* NSManagedObjectContext+Save.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSManagedObjectContext+Save.swift"; sourceTree = "<group>"; };
 		F79173F426B854B700E7DDCB /* S-Life.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "S-Life.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F79173F726B854B700E7DDCB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F79173FE26B854B700E7DDCB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F791740026B854B800E7DDCB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F791740326B854B800E7DDCB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F791740526B854B800E7DDCB /* S-LifeInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "S-LifeInfo.plist"; sourceTree = "<group>"; };
+		F797F3662709D42E00A5CB4F /* NSManagedObject+Name.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSManagedObject+Name.swift"; sourceTree = "<group>"; };
+		F797F36B2709EE4E00A5CB4F /* SLifeAlertEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SLifeAlertEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F797F36D2709EE6800A5CB4F /* SLifeAlertEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SLifeAlertEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F797F36F2709EFDA00A5CB4F /* DataAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataAccess.swift; sourceTree = "<group>"; };
 		F7AEA1FB26FED4180041B93D /* SAnimatedUIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAnimatedUIButton.swift; sourceTree = "<group>"; };
 		F7AEA1FC26FED4180041B93D /* SBorderedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBorderedButton.swift; sourceTree = "<group>"; };
 		F7AEA1FD26FED4180041B93D /* SDayButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDayButton.swift; sourceTree = "<group>"; };
@@ -99,9 +110,6 @@
 		F7EB96F926FF3C72000D4EC0 /* AlertResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertResponse.swift; sourceTree = "<group>"; };
 		F7EB96FB26FF3FCD000D4EC0 /* LoaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoaderView.xib; sourceTree = "<group>"; };
 		F7EB96FC26FF3FCD000D4EC0 /* LoaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoaderView.swift; sourceTree = "<group>"; };
-		F7EB96FF26FF60D1000D4EC0 /* S-Life-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "S-Life-Bridging-Header.h"; sourceTree = "<group>"; };
-		F7EB970026FF60D2000D4EC0 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
-		F7EB970126FF60D2000D4EC0 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		F7EB970326FF69E0000D4EC0 /* S-Life.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "S-Life.entitlements"; sourceTree = "<group>"; };
 		F7EB970426FF8ABB000D4EC0 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		F7EB970626FF9070000D4EC0 /* NearestEvacuationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearestEvacuationVC.swift; sourceTree = "<group>"; };
@@ -149,8 +157,7 @@
 		F742C2EB26BC0552001F6DC5 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				F7EB970126FF60D2000D4EC0 /* Reachability.h */,
-				F7EB970026FF60D2000D4EC0 /* Reachability.m */,
+				F797F3682709EDAF00A5CB4F /* CoreData */,
 				F7EB96F426FF35E3000D4EC0 /* CustomViews */,
 				F7EB96F126FEF857000D4EC0 /* MiscCustomViews */,
 				F7AEA21326FED4180041B93D /* Constants */,
@@ -161,7 +168,6 @@
 				F7AEA20826FED4180041B93D /* Services */,
 				F79173F726B854B700E7DDCB /* AppDelegate.swift */,
 				F742C2ED26BC066C001F6DC5 /* Controllers */,
-				F7EB96FF26FF60D1000D4EC0 /* S-Life-Bridging-Header.h */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -246,6 +252,35 @@
 				F742C2EB26BC0552001F6DC5 /* Source */,
 			);
 			path = "S-Life";
+			sourceTree = "<group>";
+		};
+		F797F3682709EDAF00A5CB4F /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				F797F36A2709EDFD00A5CB4F /* CoreDataModelClass */,
+				F797F3692709EDFD00A5CB4F /* CoreDataProperties */,
+				F78540732708A8E40003882C /* NSManagedObjectContext+Save.swift */,
+				F797F3662709D42E00A5CB4F /* NSManagedObject+Name.swift */,
+				F78540532708A51A0003882C /* ModelManager.swift */,
+				F797F36F2709EFDA00A5CB4F /* DataAccess.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		F797F3692709EDFD00A5CB4F /* CoreDataProperties */ = {
+			isa = PBXGroup;
+			children = (
+				F797F36B2709EE4E00A5CB4F /* SLifeAlertEntity+CoreDataProperties.swift */,
+			);
+			path = CoreDataProperties;
+			sourceTree = "<group>";
+		};
+		F797F36A2709EDFD00A5CB4F /* CoreDataModelClass */ = {
+			isa = PBXGroup;
+			children = (
+				F797F36D2709EE6800A5CB4F /* SLifeAlertEntity+CoreDataClass.swift */,
+			);
+			path = CoreDataModelClass;
 			sourceTree = "<group>";
 		};
 		F7AEA1FA26FED4180041B93D /* CustomClasses */ = {
@@ -476,21 +511,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F78540742708A8E40003882C /* NSManagedObjectContext+Save.swift in Sources */,
 				F7AEA22E26FED4180041B93D /* Constants.swift in Sources */,
 				F7AEA23026FED4180041B93D /* Validator.swift in Sources */,
 				F7EB970526FF8ABB000D4EC0 /* LocationManager.swift in Sources */,
+				F797F3672709D42E00A5CB4F /* NSManagedObject+Name.swift in Sources */,
 				F7AEA22D26FED4180041B93D /* UIViewController+Extension.swift in Sources */,
 				F7AEA22826FED4180041B93D /* UIColor+Extension.swift in Sources */,
+				F797F3702709EFDA00A5CB4F /* DataAccess.swift in Sources */,
+				F797F36C2709EE4E00A5CB4F /* SLifeAlertEntity+CoreDataProperties.swift in Sources */,
 				F7AEA21F26FED4180041B93D /* Responses.swift in Sources */,
 				F7EB96FA26FF3C72000D4EC0 /* AlertResponse.swift in Sources */,
 				F7AEA23126FED4180041B93D /* AppManager.swift in Sources */,
 				F7AEA21C26FED4180041B93D /* SPagingCollectionView.swift in Sources */,
 				F7AEA24526FEEEFD0041B93D /* AlertViewController.swift in Sources */,
 				F7AEA22526FED4180041B93D /* IService.swift in Sources */,
+				F797F36E2709EE6800A5CB4F /* SLifeAlertEntity+CoreDataClass.swift in Sources */,
 				F7AEA24726FEEF1F0041B93D /* MapViewController.swift in Sources */,
 				F7AEA22926FED4180041B93D /* Int+Extension.swift in Sources */,
 				F7AEA21B26FED4180041B93D /* SDayButton.swift in Sources */,
 				F7AEA22626FED4180041B93D /* APIUtils.swift in Sources */,
+				F78540542708A51A0003882C /* ModelManager.swift in Sources */,
 				F7EB96F326FEFF87000D4EC0 /* STabBar.swift in Sources */,
 				F7AEA22B26FED4180041B93D /* UIImage+Extension.swift in Sources */,
 				F742C2CB26BBFE1B001F6DC5 /* S-Life.xcdatamodeld in Sources */,
@@ -502,7 +543,6 @@
 				F7AEA21926FED4180041B93D /* SAnimatedUIButton.swift in Sources */,
 				F7EB970726FF9070000D4EC0 /* NearestEvacuationVC.swift in Sources */,
 				F7AEA22726FED4180041B93D /* UIDevice+Extension.swift in Sources */,
-				F7EB970226FF60D2000D4EC0 /* Reachability.m in Sources */,
 				F7AEA22F26FED4180041B93D /* CommonStrings.swift in Sources */,
 				F79173F826B854B700E7DDCB /* AppDelegate.swift in Sources */,
 				F7EB96F026FEF82A000D4EC0 /* CardView.swift in Sources */,
@@ -669,7 +709,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "mobiapps.s-computer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "S-Computer Dev";
-				SWIFT_OBJC_BRIDGING_HEADER = "S-Life/Source/S-Life-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -697,7 +737,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "mobiapps.s-computer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "S-Computer Adhoc";
-				SWIFT_OBJC_BRIDGING_HEADER = "S-Life/Source/S-Life-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

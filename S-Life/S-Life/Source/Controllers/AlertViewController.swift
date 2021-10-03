@@ -19,7 +19,7 @@ class AlertViewController: BaseViewController, LocationManagerDelegate {
     @IBOutlet weak var noLocalAlertsView: CardView!
     @IBOutlet weak var alertsTableView: UITableView!
     
-    var alertsArray = [Alert]()
+    var alertsArray = [SLifeAlert]()
     
     
     override func viewDidLoad() {
@@ -79,9 +79,7 @@ class AlertViewController: BaseViewController, LocationManagerDelegate {
                 print("Search Project \(resPonse)")
                 let jsonRes = try? JSONDecoder().decode(AlertResponse.self, from: responseData)
                 if let alertRespObj = jsonRes {
-                    for obj in alertRespObj {
-                        self.alertsArray.append(obj)
-                    }
+                    self.alertsArray = SLifeAlert.processAndGetAlertResponse(response: alertRespObj)
                 }
                 self.alertsTableView.reloadData()
             } else {
@@ -132,7 +130,7 @@ extension AlertViewController: UITableViewDelegate, UITableViewDataSource {
         if let cell = tableView.dequeueReusableCell(withIdentifier: Constant.reUseIds.alertCellID) as? AlertTableViewCell {
             let alertObj = alertsArray[indexPath.row]
             cell.alertTitle.text = alertObj.title ?? ""
-            cell.alertCategory.text = alertObj.category?.getAlertCatName()
+            cell.alertCategory.text = Category(rawValue: alertObj.category?.intValue ?? 0)?.getAlertCatName()
             cell.alertDescLabel.text = alertObj.desc ?? ""
             return cell
         }

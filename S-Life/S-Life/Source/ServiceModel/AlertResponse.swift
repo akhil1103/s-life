@@ -12,11 +12,16 @@ struct Alert: Codable {
     let title, desc: String?
     let location: Location?
     let category: Category?
+    let id: String?
+    let version: Int?
+    let date: String?
 
     enum CodingKeys: String, CodingKey {
         case title
         case desc = "description"
-        case location, category
+        case id = "_id"
+        case version = "__v"
+        case location, category, date
     }
 }
 
