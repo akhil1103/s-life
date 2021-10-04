@@ -10,7 +10,7 @@ import Mapbox
 
 class NearestEvacuationVC: UIViewController, MGLMapViewDelegate {
     
-
+    @IBOutlet weak var topBarHight: NSLayoutConstraint!
     @IBOutlet weak var mapParentView: UIView!
     var progressView: UIProgressView!
     var mapView: MGLMapView!
@@ -20,12 +20,14 @@ class NearestEvacuationVC: UIViewController, MGLMapViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        topBarHight.constant = UIDevice.current.hasNotch ? 110 : 65
+        
         mapView = MGLMapView(frame: mapParentView.bounds, styleURL: NSURL(string: "mapbox://styles/amittal776/ckrn7n8014gq917mshri41l56") as URL?)
         mapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         mapView.tintColor = .gray
         mapView.delegate = self
         mapParentView.addSubview(mapView)
-
+        
         mapView.setCenter(CLLocationCoordinate2D(latitude: location?.lat ?? 0.0, longitude: location?.long ?? 0.0),
                           zoomLevel: 9, animated: false)
 
@@ -37,9 +39,11 @@ class NearestEvacuationVC: UIViewController, MGLMapViewDelegate {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
+    @IBAction func btnBackTapped(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
+    }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.title = "Nearest Evacuation"

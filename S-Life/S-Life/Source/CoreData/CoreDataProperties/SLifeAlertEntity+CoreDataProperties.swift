@@ -83,7 +83,7 @@ extension SLifeAlert {
         }
     }
     
-    fileprivate static func convertNewAlertsOld() {
+    static func convertNewAlertsOld() {
         let alerts = DataAccess.sharedInstance.getObjects(.none) as [SLifeAlert]
         for obj in alerts {
             obj.isNew = false

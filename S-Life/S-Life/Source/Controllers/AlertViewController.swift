@@ -35,12 +35,19 @@ class AlertViewController: BaseViewController, LocationManagerDelegate {
         LocationManager.shared.delegate = self
         topBarHight.constant = UIDevice.current.hasNotch ? 110 : 65
         topSpaceToHeaderImageCosntraint.constant = UIDevice.current.hasNotch ? 0 : 0
-        
+        addAppBGToFGNotificationObserver()
         registerTableViewCells()
+    }
+
+    func addAppBGToFGNotificationObserver() {
+        NotificationCenter.default.addObserver(self, selector: #selector(self.getWifiInfo), name: Notification.Name(Constant.NotificationIdentifier.notificationIdOnAppBGToFG), object: nil)
+    }
+    
+    func removeAppBGToFGNotificationObserver() {
+        NotificationCenter.default.removeObserver(self, name: Notification.Name(Constant.NotificationIdentifier.notificationIdOnAppBGToFG), object: nil)
     }
     
     fileprivate func registerTableViewCells() {
-        
         let nib = UINib(nibName: Constant.reUseIds.alertCellID, bundle: nil)
         alertsTableView.register(nib, forCellReuseIdentifier: Constant.reUseIds.alertCellID)
     }
@@ -74,8 +81,8 @@ class AlertViewController: BaseViewController, LocationManagerDelegate {
         DispatchQueue.main.async {
             let nearestEvacuationVC = self.storyboard?.instantiateViewController(withIdentifier: Constant.StoryboardIDs.nearestEvacuationVC) as? NearestEvacuationVC
             nearestEvacuationVC?.location = Location(lat: self.newAlert?.lat?.doubleValue, long: self.newAlert?.long?.doubleValue)
+            self.navigationController?.setNavigationBarHidden(true, animated: false)
             self.navigationController?.pushViewController(nearestEvacuationVC!, animated: true)
-            self.navigationController?.setNavigationBarHidden(false, animated: false)
         }
     }
     //MARK:- API CALLS
@@ -131,7 +138,7 @@ class AlertViewController: BaseViewController, LocationManagerDelegate {
         }
     }
     
-    func getWifiInfo() {
+    @objc func getWifiInfo() {
         if Validate.connectedToSMCHotSpot() {
             hotspotConnectionIndicationLabel.isHidden = false
             notifyForHotspotConnectionView.isHidden = true
@@ -140,6 +147,7 @@ class AlertViewController: BaseViewController, LocationManagerDelegate {
             LoaderView.show()
             getSearchProjs()
         } else {
+            SLifeAlert.convertNewAlertsOld()
             hotspotConnectionIndicationLabel.isHidden = true
             notifyForHotspotConnectionView.isHidden = false
             btnConnect.isHidden = false
@@ -200,8 +208,8 @@ extension AlertViewController: AlertTableViewCellDelegate {
         DispatchQueue.main.async {
             let nearestEvacuationVC = self.storyboard?.instantiateViewController(withIdentifier: Constant.StoryboardIDs.nearestEvacuationVC) as? NearestEvacuationVC
             nearestEvacuationVC?.location = Location(lat: alertObj.lat?.doubleValue, long: alertObj.long?.doubleValue)
+            self.tabBarController?.navigationController?.setNavigationBarHidden(true, animated: false)
             self.navigationController?.pushViewController(nearestEvacuationVC!, animated: true)
-            self.navigationController?.setNavigationBarHidden(false, animated: false)
         }
     }
 }

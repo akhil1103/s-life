@@ -36,7 +36,7 @@ enum Category: Int, Codable {
     func getAlertCatName() -> String {
         switch self {
         case .cat:
-            return "Disaster"
+            return "Others"
         case .cat1:
             return "Natural Calamity"
         }

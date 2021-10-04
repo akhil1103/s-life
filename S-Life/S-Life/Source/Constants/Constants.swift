@@ -38,6 +38,10 @@ class Constant {
         static let nearestEvacuationVC = "NearestEvacuationVC"
     }
     
+    struct NotificationIdentifier {
+        static let notificationIdOnAppBGToFG = "CheckForWifiOnAppBackgroundToForeGround"
+    }
+    
     static let placeHolderProjImage = UIImage(named: "s-c-home-image-placeholder")
 }
 
