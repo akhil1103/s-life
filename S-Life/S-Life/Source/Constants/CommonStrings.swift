@@ -13,7 +13,7 @@ struct CommonStrings {
     static let logoutMessage = "Are you sure you want to log out?"
     static let noInternetConnectionMessage = "Seems Internet connection is not available"
     static let wifiToggleTurnedOff = "wifi toggle Turned Off"
-    static let locationPermissionAlert = "Location access is required to connect local wifi"
+    static let locationPermissionAlert = "Location access is required to access wifi information"
     static let yes = "Yes"
     static let no = "NO"
     static let ok = "OK"

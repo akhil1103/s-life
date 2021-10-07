@@ -30,7 +30,7 @@ class Validate: NSObject {
     }
     
     fileprivate static let mockWifiEnabled = false
-    fileprivate static let SMC_WiFi_Name = "I_YELAGANA"//"SMC_HotSpot"
+    static let SMC_WiFi_Name = "Suzuki_Car_Hotspot"//"SMC_HotSpot"
     static func connectedToSMCHotSpot() -> Bool {
         if Validate.mockWifiEnabled {
             return true

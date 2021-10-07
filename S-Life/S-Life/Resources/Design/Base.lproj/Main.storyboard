@@ -259,8 +259,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X6j-8g-zto" customClass="CardView" customModule="S_Life" customModuleProvider="target">
                                 <rect key="frame" x="10" y="154.66666666666666" width="394" height="74.333333333333343"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please connect to SMC hotspot" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O5B-Tu-ook">
-                                        <rect key="frame" x="10" y="29.333333333333343" width="374" height="16"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O5B-Tu-ook">
+                                        <rect key="frame" x="10" y="37.333333333333343" width="374" height="0.0"/>
                                         <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="13"/>
                                         <color key="textColor" red="0.094117647060000004" green="0.20000000000000001" blue="0.35294117650000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
@@ -473,6 +473,7 @@
                         <outlet property="alertsTableView" destination="Hik-fo-FGa" id="seO-AY-q1o"/>
                         <outlet property="btnConnect" destination="Rmk-W4-niK" id="Q1o-2P-SNs"/>
                         <outlet property="btnNearestEva" destination="x85-51-ucb" id="TSq-4m-uq8"/>
+                        <outlet property="connectToWifiLabel" destination="O5B-Tu-ook" id="R5y-FX-uWq"/>
                         <outlet property="hotspotConnectionIndicationLabel" destination="eWc-0Q-5QZ" id="BtZ-zo-yBN"/>
                         <outlet property="latestAlertCategory" destination="56t-NW-JkJ" id="P8m-A1-cb7"/>
                         <outlet property="latestAlertDesc" destination="g07-nt-2QP" id="swX-Wd-LcR"/>
@@ -601,8 +602,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.094117647060000004" green="0.20000000000000001" blue="0.35294117650000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="barTintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
