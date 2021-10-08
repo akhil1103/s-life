@@ -83,7 +83,7 @@ class AlertViewController: BaseViewController, LocationManagerDelegate {
     @IBAction func nearestEvacuationBtnTapped(_ sender: Any) {
         DispatchQueue.main.async {
             let nearestEvacuationVC = self.storyboard?.instantiateViewController(withIdentifier: Constant.StoryboardIDs.nearestEvacuationVC) as? NearestEvacuationVC
-            nearestEvacuationVC?.location = Location(lat: self.newAlert?.lat?.doubleValue, long: self.newAlert?.long?.doubleValue)
+            nearestEvacuationVC?.alert = self.newAlert
             self.navigationController?.setNavigationBarHidden(true, animated: false)
             self.navigationController?.pushViewController(nearestEvacuationVC!, animated: true)
         }
@@ -210,7 +210,7 @@ extension AlertViewController: AlertTableViewCellDelegate {
         let alertObj = alertsArray[atRow]
         DispatchQueue.main.async {
             let nearestEvacuationVC = self.storyboard?.instantiateViewController(withIdentifier: Constant.StoryboardIDs.nearestEvacuationVC) as? NearestEvacuationVC
-            nearestEvacuationVC?.location = Location(lat: alertObj.lat?.doubleValue, long: alertObj.long?.doubleValue)
+            nearestEvacuationVC?.alert = alertObj
             self.tabBarController?.navigationController?.setNavigationBarHidden(true, animated: false)
             self.navigationController?.pushViewController(nearestEvacuationVC!, animated: true)
         }

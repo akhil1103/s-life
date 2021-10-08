@@ -14,8 +14,7 @@ class NearestEvacuationVC: UIViewController, MGLMapViewDelegate {
     @IBOutlet weak var mapParentView: UIView!
     var progressView: UIProgressView!
     var mapView: MGLMapView!
-
-    var location: Location?
+    var alert: SLifeAlert?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +27,7 @@ class NearestEvacuationVC: UIViewController, MGLMapViewDelegate {
         mapView.delegate = self
         mapParentView.addSubview(mapView)
         
-        mapView.setCenter(CLLocationCoordinate2D(latitude: location?.lat ?? 0.0, longitude: location?.long ?? 0.0),
+        mapView.setCenter(CLLocationCoordinate2D(latitude: alert?.lat?.doubleValue ?? 0.0, longitude: alert?.long?.doubleValue ?? 0.0),
                           zoomLevel: 9, animated: false)
 
         // Setup offline pack notification handlers.
@@ -58,25 +57,18 @@ class NearestEvacuationVC: UIViewController, MGLMapViewDelegate {
     
     func mapView(_ mapView: MGLMapView, didFinishLoading style: MGLStyle) {
         let point = MGLPointAnnotation()
-        point.coordinate = CLLocationCoordinate2D(latitude: location?.lat ?? 0.0, longitude: location?.long ?? 0.0)
-         
-        // Create a data source to hold the point data
-        let shapeSource = MGLShapeSource(identifier: "marker-source", shape: point, options: nil)
-         
-        // Create a style layer for the symbol
-        let shapeLayer = MGLSymbolStyleLayer(identifier: "marker-style", source: shapeSource)
-         
-        // Add the image to the style's sprite
-        if let image = UIImage(named: "location") {
-        style.setImage(image, forName: "home-symbol")
+        point.coordinate = CLLocationCoordinate2D(latitude: alert?.lat?.doubleValue ?? 0.0, longitude: alert?.long?.doubleValue ?? 0.0)
+        point.title = alert?.title ?? ""
+        mapView.addAnnotation(point)
+    }
+    
+    func mapView( _ mapView: MGLMapView, imageFor annotation: MGLAnnotation ) -> MGLAnnotationImage? {
+      var annotationImage : MGLAnnotationImage? = nil
+        if let image = UIImage(named: "location"), let resuseId = annotation.title {
+            annotationImage = MGLAnnotationImage(image: image, reuseIdentifier: resuseId ?? "")
+            return annotationImage
         }
-         
-        // Tell the layer to use the image in the sprite
-        shapeLayer.iconImageName = NSExpression(forConstantValue: "home-symbol")
-         
-        // Add the source and style layer to the map
-        style.addSource(shapeSource)
-        style.addLayer(shapeLayer)
+        return nil
     }
 
     override func viewDidDisappear(_ animated: Bool) {
@@ -167,6 +159,11 @@ class NearestEvacuationVC: UIViewController, MGLMapViewDelegate {
             let maximumCount = (notification.userInfo?[MGLOfflinePackUserInfoKey.maximumCount] as AnyObject).uint64Value {
             print("Offline pack “\(userInfo["name"] ?? "unknown")” reached limit of \(maximumCount) tiles.")
         }
+    }
+    
+    func mapView(_ mapView: MGLMapView, annotationCanShowCallout annotation: MGLAnnotation) -> Bool {
+    // Always allow callouts to popup when annotations are tapped.
+        return true
     }
 
 }
