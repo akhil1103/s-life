@@ -20,8 +20,7 @@ class NearestEvacuationVC: UIViewController, MGLMapViewDelegate {
         super.viewDidLoad()
         
         topBarHight.constant = UIDevice.current.hasNotch ? 110 : 65
-        
-        mapView = MGLMapView(frame: mapParentView.bounds, styleURL: NSURL(string: "mapbox://styles/amittal776/ckrn7n8014gq917mshri41l56") as URL?)
+        mapView = MGLMapView(frame: mapParentView.bounds, styleURL: NSURL(string: "mapbox://styles/amittal776/ckuc7xe1s4nst18ldjbwuzzg8") as URL?)
         mapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         mapView.tintColor = .gray
         mapView.delegate = self
@@ -163,7 +162,7 @@ class NearestEvacuationVC: UIViewController, MGLMapViewDelegate {
     
     func mapView(_ mapView: MGLMapView, annotationCanShowCallout annotation: MGLAnnotation) -> Bool {
     // Always allow callouts to popup when annotations are tapped.
-        return true
+        return false
     }
 
 }

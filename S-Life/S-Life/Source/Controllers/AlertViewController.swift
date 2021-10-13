@@ -33,7 +33,8 @@ class AlertViewController: BaseViewController, LocationManagerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        connectToWifiLabel.text = "Please connect to the network in device settings. \n\n Settings → Wi-Fi → \(Validate.SMC_WiFi_Name)"
+        connectToWifiLabel.text = "Please connect to \(Validate.SMC_WiFi_Name)"
+        //connectToWifiLabel.text = "Please connect to the network in device settings. \n\n Settings → Wi-Fi → \(Validate.SMC_WiFi_Name)"
         self.alertsTableView.estimatedRowHeight = 88.0
         LocationManager.shared.delegate = self
         topBarHight.constant = UIDevice.current.hasNotch ? 110 : 65
