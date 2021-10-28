@@ -14,6 +14,7 @@ struct CommonStrings {
     static let noInternetConnectionMessage = "Seems Internet connection is not available"
     static let wifiToggleTurnedOff = "wifi toggle Turned Off"
     static let locationPermissionAlert = "Location access is required to access wifi information"
+    static let noNewAlerts = "S-Life try to keep you safe when in a Disaster situation"
     static let yes = "Yes"
     static let no = "NO"
     static let ok = "OK"

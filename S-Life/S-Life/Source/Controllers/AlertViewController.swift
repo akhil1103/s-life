@@ -57,6 +57,7 @@ class AlertViewController: BaseViewController, LocationManagerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        noLatestAlertLabel.text = CommonStrings.noNewAlerts
         connectToWifiLabel.text = "Please connect to \(Validate.SMC_WiFi_Name)"
         //connectToWifiLabel.text = "Please connect to the network in device settings. \n\n Settings → Wi-Fi → \(Validate.SMC_WiFi_Name)"
         self.alertsTableView.estimatedRowHeight = 88.0
@@ -91,13 +92,6 @@ class AlertViewController: BaseViewController, LocationManagerDelegate {
             self.tabBarController?.navigationController?.navigationBar.tintColor = .white
             self.tabBarController?.navigationController?.navigationBar.standardAppearance = appearance
             self.tabBarController?.navigationController?.navigationBar.scrollEdgeAppearance = self.tabBarController?.navigationController?.navigationBar.standardAppearance
-            
-            let tabBarappearance = UITabBarAppearance()
-            tabBarappearance.configureWithOpaqueBackground()
-            tabBarappearance.backgroundColor = Constant.appColor
-            
-            self.tabBarController?.tabBar.standardAppearance = tabBarappearance
-            self.tabBarController?.tabBar.scrollEdgeAppearance = self.tabBarController?.tabBar.standardAppearance
         }
         LocationManager.shared.requestLocationAuthorization()
         getWifiInfo()
@@ -123,32 +117,13 @@ class AlertViewController: BaseViewController, LocationManagerDelegate {
     //MARK:- API CALLS
     
     fileprivate func hideLatestAlertSection() {
-        self.topSectionConstr1Height.constant = 0
-        self.topSectionConstr2Height.constant = 0
-        self.topSectionConstr3Height.constant = 0
         self.topSectionConstr4Height.constant = 0
         self.topSectionConstr5Height.constant = 0
-        self.topSectionInsideViewSpace1.constant = 0
-        self.topSectionInsideViewSpace2.constant = 0
-        self.topSectionInsideViewSpace3.constant = 0
-        self.topSectionInsideViewSpace4.constant = 0
-        
-        self.noLatestAlertLabel.text = ""
-        self.latestAlertDesc.text = ""
-        self.latestAlertCategory.text = ""
-        self.latestAlertTitleLabel.text = ""
     }
     
     fileprivate func showLatestAlertSection() {
-        self.topSectionConstr1Height.constant = self.topSectionConstr1HeightValue
-        self.topSectionConstr2Height.constant = self.topSectionConstr2HeightValue
-        self.topSectionConstr3Height.constant = self.topSectionConstr3HeightValue
         self.topSectionConstr4Height.constant = self.topSectionConstr4HeightValue
         self.topSectionConstr5Height.constant = self.topSectionConstr5HeightValue
-        self.topSectionInsideViewSpace1.constant = self.topSectionInsideViewSpace1Value
-        self.topSectionInsideViewSpace2.constant = self.topSectionInsideViewSpace2Value
-        self.topSectionInsideViewSpace3.constant = self.topSectionInsideViewSpace3Value
-        self.topSectionInsideViewSpace4.constant = self.topSectionInsideViewSpace4Value
     }
     
     fileprivate func getAlerts() {
@@ -205,7 +180,6 @@ class AlertViewController: BaseViewController, LocationManagerDelegate {
     }
     
     @objc func getWifiInfo() {
-        showLatestAlertSection()
         if Validate.connectedToSMCHotSpot() {
             hotspotConnectionIndicationLabel.isHidden = false
             notifyForHotspotConnectionView.isHidden = true
@@ -217,6 +191,7 @@ class AlertViewController: BaseViewController, LocationManagerDelegate {
             SLifeAlert.convertNewAlertsOld()
             hotspotConnectionIndicationLabel.isHidden = true
             notifyForHotspotConnectionView.isHidden = false
+            showLatestAlertSection()
             btnConnect.isHidden = false
             btnNearestEva.isHidden = true
             self.alertsArray = SLifeAlert.getOldAlerts()
