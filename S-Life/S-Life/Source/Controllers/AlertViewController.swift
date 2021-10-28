@@ -91,7 +91,7 @@ class AlertViewController: BaseViewController, LocationManagerDelegate {
     }
     //MARK:- API CALLS
     
-    fileprivate func getSearchProjs() {
+    fileprivate func getAlerts() {
         self.alertsArray.removeAll()
         APIUtils.apiUtilObj.callApi(requestUrl: Constant.base_url, method: .get, parameters: nil) { obj, responseData in
             LoaderView.hide()
@@ -149,7 +149,7 @@ class AlertViewController: BaseViewController, LocationManagerDelegate {
             btnConnect.isHidden = true
             btnNearestEva.isHidden = false
             LoaderView.show()
-            getSearchProjs()
+            getAlerts()
         } else {
             SLifeAlert.convertNewAlertsOld()
             hotspotConnectionIndicationLabel.isHidden = true

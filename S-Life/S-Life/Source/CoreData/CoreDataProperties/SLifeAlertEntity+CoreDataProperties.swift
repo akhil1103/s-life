@@ -57,7 +57,8 @@ extension SLifeAlert {
         let oldAlerts = alerts.filter { obj in
             return (obj.isNew?.boolValue ?? false == false)
         }
-        return oldAlerts
+        let sortedOldAlerts = oldAlerts.sorted(by: { $0.date ?? "" > $1.date ?? "" })
+        return sortedOldAlerts
     }
     
     static func getNew() -> SLifeAlert? {
