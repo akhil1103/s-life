@@ -91,6 +91,13 @@ class AlertViewController: BaseViewController, LocationManagerDelegate {
             self.tabBarController?.navigationController?.navigationBar.tintColor = .white
             self.tabBarController?.navigationController?.navigationBar.standardAppearance = appearance
             self.tabBarController?.navigationController?.navigationBar.scrollEdgeAppearance = self.tabBarController?.navigationController?.navigationBar.standardAppearance
+            
+            let tabBarappearance = UITabBarAppearance()
+            tabBarappearance.configureWithOpaqueBackground()
+            tabBarappearance.backgroundColor = Constant.appColor
+            
+            self.tabBarController?.tabBar.standardAppearance = tabBarappearance
+            self.tabBarController?.tabBar.scrollEdgeAppearance = self.tabBarController?.tabBar.standardAppearance
         }
         LocationManager.shared.requestLocationAuthorization()
         getWifiInfo()
