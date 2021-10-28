@@ -479,11 +479,22 @@
                         <outlet property="latestAlertDesc" destination="g07-nt-2QP" id="swX-Wd-LcR"/>
                         <outlet property="latestAlertTagView" destination="Buq-La-tYM" id="E6G-K0-Flv"/>
                         <outlet property="latestAlertTitleLabel" destination="eVe-ij-AiR" id="Ppl-cb-nPg"/>
+                        <outlet property="latestAlertView" destination="Omq-YW-Wf7" id="Scf-bf-BjF"/>
                         <outlet property="localAlertMainView" destination="20X-oY-rEX" id="5Pd-By-c9U"/>
                         <outlet property="noLatestAlertLabel" destination="niL-Zb-Ic4" id="Mmv-bV-Yxb"/>
                         <outlet property="noLocalAlertsView" destination="w7O-rn-0WE" id="y3N-oG-kQW"/>
                         <outlet property="notifyForHotspotConnectionView" destination="X6j-8g-zto" id="suW-dh-lTF"/>
                         <outlet property="topBarHight" destination="9IR-wM-pM5" id="Kvw-24-qSJ"/>
+                        <outlet property="topSectionCardView" destination="q1p-dD-sgn" id="FVv-zd-Kn6"/>
+                        <outlet property="topSectionConstr1Height" destination="I2L-wD-TO4" id="XBs-fs-QMh"/>
+                        <outlet property="topSectionConstr2Height" destination="x1M-5Y-Voi" id="mda-hU-sg3"/>
+                        <outlet property="topSectionConstr3Height" destination="hqb-Ks-MIJ" id="rfD-hb-9Uh"/>
+                        <outlet property="topSectionConstr4Height" destination="wJn-lU-btY" id="g4K-d4-Lco"/>
+                        <outlet property="topSectionConstr5Height" destination="5oJ-oW-TGC" id="EbN-Uj-jRv"/>
+                        <outlet property="topSectionInsideViewSpace1" destination="klU-Si-VBc" id="fIY-hz-E47"/>
+                        <outlet property="topSectionInsideViewSpace2" destination="iqT-vd-KLS" id="p3d-Xo-u68"/>
+                        <outlet property="topSectionInsideViewSpace3" destination="vEG-dc-fT9" id="mST-zS-0zr"/>
+                        <outlet property="topSectionInsideViewSpace4" destination="9FL-hN-bTq" id="jCy-1D-HJA"/>
                         <outlet property="topSpaceToHeaderImageCosntraint" destination="FYv-WI-ISc" id="d3O-KL-090"/>
                     </connections>
                 </viewController>

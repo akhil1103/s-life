@@ -8,9 +8,31 @@
 import UIKit
 
 class AlertViewController: BaseViewController, LocationManagerDelegate {
+    
+    fileprivate let topSectionConstr1HeightValue: CGFloat = 15.0
+    fileprivate let topSectionConstr2HeightValue: CGFloat = 10.0
+    fileprivate let topSectionConstr3HeightValue: CGFloat = 30.0
+    fileprivate let topSectionConstr4HeightValue: CGFloat = 50.0
+    fileprivate let topSectionConstr5HeightValue: CGFloat = 30.0
+    
+    fileprivate let topSectionInsideViewSpace1Value: CGFloat = 10.0
+    fileprivate let topSectionInsideViewSpace2Value: CGFloat = 5.0
+    fileprivate let topSectionInsideViewSpace3Value: CGFloat = 5.0
+    fileprivate let topSectionInsideViewSpace4Value: CGFloat = 10.0
 
     @IBOutlet weak var topBarHight: NSLayoutConstraint!
     @IBOutlet weak var topSpaceToHeaderImageCosntraint: NSLayoutConstraint!
+    
+    @IBOutlet weak var topSectionConstr1Height: NSLayoutConstraint!
+    @IBOutlet weak var topSectionConstr2Height: NSLayoutConstraint!
+    @IBOutlet weak var topSectionConstr3Height: NSLayoutConstraint!
+    @IBOutlet weak var topSectionConstr4Height: NSLayoutConstraint!
+    @IBOutlet weak var topSectionConstr5Height: NSLayoutConstraint!
+    
+    @IBOutlet weak var topSectionInsideViewSpace1: NSLayoutConstraint!
+    @IBOutlet weak var topSectionInsideViewSpace2: NSLayoutConstraint!
+    @IBOutlet weak var topSectionInsideViewSpace3: NSLayoutConstraint!
+    @IBOutlet weak var topSectionInsideViewSpace4: NSLayoutConstraint!
     
     @IBOutlet weak var hotspotConnectionIndicationLabel: UILabel!
     @IBOutlet weak var notifyForHotspotConnectionView: CardView!
@@ -24,8 +46,10 @@ class AlertViewController: BaseViewController, LocationManagerDelegate {
     @IBOutlet weak var latestAlertCategory: UILabel!
     @IBOutlet weak var latestAlertDesc: UILabel!
     @IBOutlet weak var noLatestAlertLabel: UILabel!
+    @IBOutlet weak var latestAlertView: UIView!
     @IBOutlet weak var connectToWifiLabel: UILabel!
-
+    @IBOutlet weak var topSectionCardView: CardView!
+    
     
     var alertsArray = [SLifeAlert]()
     var newAlert: SLifeAlert?
@@ -91,6 +115,35 @@ class AlertViewController: BaseViewController, LocationManagerDelegate {
     }
     //MARK:- API CALLS
     
+    fileprivate func hideLatestAlertSection() {
+        self.topSectionConstr1Height.constant = 0
+        self.topSectionConstr2Height.constant = 0
+        self.topSectionConstr3Height.constant = 0
+        self.topSectionConstr4Height.constant = 0
+        self.topSectionConstr5Height.constant = 0
+        self.topSectionInsideViewSpace1.constant = 0
+        self.topSectionInsideViewSpace2.constant = 0
+        self.topSectionInsideViewSpace3.constant = 0
+        self.topSectionInsideViewSpace4.constant = 0
+        
+        self.noLatestAlertLabel.text = ""
+        self.latestAlertDesc.text = ""
+        self.latestAlertCategory.text = ""
+        self.latestAlertTitleLabel.text = ""
+    }
+    
+    fileprivate func showLatestAlertSection() {
+        self.topSectionConstr1Height.constant = self.topSectionConstr1HeightValue
+        self.topSectionConstr2Height.constant = self.topSectionConstr2HeightValue
+        self.topSectionConstr3Height.constant = self.topSectionConstr3HeightValue
+        self.topSectionConstr4Height.constant = self.topSectionConstr4HeightValue
+        self.topSectionConstr5Height.constant = self.topSectionConstr5HeightValue
+        self.topSectionInsideViewSpace1.constant = self.topSectionInsideViewSpace1Value
+        self.topSectionInsideViewSpace2.constant = self.topSectionInsideViewSpace2Value
+        self.topSectionInsideViewSpace3.constant = self.topSectionInsideViewSpace3Value
+        self.topSectionInsideViewSpace4.constant = self.topSectionInsideViewSpace4Value
+    }
+    
     fileprivate func getAlerts() {
         self.alertsArray.removeAll()
         APIUtils.apiUtilObj.callApi(requestUrl: Constant.base_url, method: .get, parameters: nil) { obj, responseData in
@@ -103,6 +156,7 @@ class AlertViewController: BaseViewController, LocationManagerDelegate {
                 }
                 self.newAlert = SLifeAlert.getNew()
                 if let newA = self.newAlert {
+                    self.showLatestAlertSection()
                     self.latestAlertTagView.isHidden = false
                     self.noLatestAlertLabel.isHidden = true
                     self.latestAlertDesc.isHidden = false
@@ -112,6 +166,7 @@ class AlertViewController: BaseViewController, LocationManagerDelegate {
                     self.latestAlertCategory.text = Category(rawValue: newA.category?.intValue ?? 0)?.getAlertCatName()
                     self.latestAlertTitleLabel.text = newA.title ?? ""
                 } else {
+                    self.hideLatestAlertSection()
                     self.latestAlertTagView.isHidden = true
                     self.noLatestAlertLabel.isHidden = false
                     self.latestAlertDesc.isHidden = true
@@ -143,6 +198,7 @@ class AlertViewController: BaseViewController, LocationManagerDelegate {
     }
     
     @objc func getWifiInfo() {
+        showLatestAlertSection()
         if Validate.connectedToSMCHotSpot() {
             hotspotConnectionIndicationLabel.isHidden = false
             notifyForHotspotConnectionView.isHidden = true
