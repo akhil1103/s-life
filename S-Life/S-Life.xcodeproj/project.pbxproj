@@ -698,7 +698,7 @@
 				CODE_SIGN_ENTITLEMENTS = "S-Life/S-Life.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer: Akhil Mittal (LJZEZ69YVH)";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 4J4C9KD6X6;
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "S-Life/Configuration/S-LifeInfo.plist";
@@ -707,7 +707,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0;
+				MARKETING_VERSION = 3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "mobiapps.s-life";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "S-Life Dev";
@@ -728,7 +728,7 @@
 				CODE_SIGN_ENTITLEMENTS = "S-Life/S-Life.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Distribution: Akhil Mittal (4J4C9KD6X6)";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 4J4C9KD6X6;
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "S-Life/Configuration/S-LifeInfo.plist";
@@ -737,7 +737,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0;
+				MARKETING_VERSION = 3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "mobiapps.s-life";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "S-Life Adhoc";
