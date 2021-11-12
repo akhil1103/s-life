@@ -1,16 +1,33 @@
 PODS:
-  - Alamofire (5.2.2)
+  - Alamofire (4.9.1)
+  - AlamofireObjectMapper (5.2.1):
+    - Alamofire (~> 4.7)
+    - ObjectMapper (~> 3.4)
+  - Mapbox-iOS-SDK (6.3.0):
+    - MapboxMobileEvents (~> 0.10.4)
+  - MapboxMobileEvents (0.10.12)
+  - ObjectMapper (3.5.3)
 
 DEPENDENCIES:
   - Alamofire
+  - AlamofireObjectMapper (~> 5.2)
+  - Mapbox-iOS-SDK (~> 6.3.0)
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - AlamofireObjectMapper
+    - Mapbox-iOS-SDK
+    - MapboxMobileEvents
+    - ObjectMapper
 
 SPEC CHECKSUMS:
-  Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  AlamofireObjectMapper: 1989f690e982b71921b9253f53a4f33a9bc00d88
+  Mapbox-iOS-SDK: 2563ed87ead6ec08f1c2090873977b8a7be335a8
+  MapboxMobileEvents: b72b07268586c6fd1f53178f08df15f74070b188
+  ObjectMapper: 97111c97e054a6ee25917662106689f0b4127b37
 
-PODFILE CHECKSUM: 10662f4228d30c7116f526343f7a2d41f07179db
+PODFILE CHECKSUM: eb38094347bab4ec6b50eb024d5ed56269f1c8f2
 
 COCOAPODS: 1.10.2
