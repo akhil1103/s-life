@@ -2,7 +2,7 @@
 //  Int+Extension.swift
 //  S-Life
 //
-//  Created by balabalaji gowd yelagana on 12/09/21.
+//  Created by Akhil Mittal on 12/02/22.
 //
 
 import Foundation

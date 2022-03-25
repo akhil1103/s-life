@@ -2,7 +2,7 @@
 //  MapViewController.swift
 //  S-Life
 //
-//  Created by balabalaji gowd yelagana on 25/09/21.
+//  Created by Akhil Mittal on 25/02/22.
 //
 
 import UIKit
@@ -67,7 +67,7 @@ class MapViewController: BaseViewController, MGLMapViewDelegate {
         let point4 = MGLPointAnnotation()
         point4.coordinate = CLLocationCoordinate2D(latitude:17.504500, longitude:78.335857)
         point4.title = "Evacuation Center 003"
-        point4.subtitle = "Evacuation center in Chandanagar powered and facilitated by SMC"
+        point4.subtitle = "Evacuation center in Chandanagar powered and facilitated by authorised organisation"
         evacuationCentersPoints.append(point4)
             
         let point5 = MGLPointAnnotation()
@@ -193,6 +193,6 @@ class MapViewController: BaseViewController, MGLMapViewDelegate {
     
     func mapView(_ mapView: MGLMapView, annotationCanShowCallout annotation: MGLAnnotation) -> Bool {
     // Always allow callouts to popup when annotations are tapped.
-        return false
+        return true
     }
 }

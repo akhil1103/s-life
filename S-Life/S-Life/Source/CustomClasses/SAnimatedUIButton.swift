@@ -2,7 +2,7 @@
 //  SAnimatedUIButton.swift
 //  S-Life
 //
-//  Created by balabalaji gowd yelagana on 24/08/21.
+//  Created by Akhil Mittal on 24/01/22.
 //
 
 import UIKit

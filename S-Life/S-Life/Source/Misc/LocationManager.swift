@@ -2,7 +2,7 @@
 //  LocationManager.swift
 //  S-Life
 //
-//  Created by balabalaji gowd yelagana on 25/09/21.
+//  Created by Akhil Mittal on 25/02/22.
 //
 
 import Foundation

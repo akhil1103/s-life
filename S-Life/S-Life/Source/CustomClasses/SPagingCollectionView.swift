@@ -2,7 +2,7 @@
 //  SPagingCollectionView.swift
 //  S-Life
 //
-//  Created by balabalaji gowd yelagana on 25/08/21.
+//  Created by Akhil Mittal on 25/01/22.
 //
 
 import UIKit

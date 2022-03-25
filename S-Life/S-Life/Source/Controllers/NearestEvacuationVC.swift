@@ -2,7 +2,7 @@
 //  NearestEvacuationVC.swift
 //  S-Life
 //
-//  Created by balabalaji gowd yelagana on 25/09/21.
+//  Created by Akhil Mittal on 25/02/22.
 //
 
 import UIKit
@@ -162,7 +162,7 @@ class NearestEvacuationVC: UIViewController, MGLMapViewDelegate {
     
     func mapView(_ mapView: MGLMapView, annotationCanShowCallout annotation: MGLAnnotation) -> Bool {
     // Always allow callouts to popup when annotations are tapped.
-        return false
+        return true
     }
 
 }

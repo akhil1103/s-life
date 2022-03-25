@@ -2,7 +2,7 @@
 //  SDayButton.swift
 //  S-Life
 //
-//  Created by balabalaji gowd yelagana on 21/09/21.
+//  Created by Akhil Mittal on 21/02/22.
 //
 
 import UIKit
@@ -19,7 +19,5 @@ class SDayButton: UIButton {
         titleLabel?.font = UIFont(name: Constant.AppFont.medium, size: 18) ?? UIFont.systemFont(ofSize: 18)
         setTitleColor(.white, for: .normal)
         setTitleColor(.white, for: .selected)
-//        setBackgroundImage(UIImage(named: "normalDayButtonBG"), for: .normal)
-//        setBackgroundImage(UIImage(named: "selectedDayButtonBG"), for: .selected)
     }
 }

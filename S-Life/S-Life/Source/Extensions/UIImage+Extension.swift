@@ -2,7 +2,7 @@
 //  UIImage+Extension.swift
 //  S-Life
 //
-//  Created by balabalaji gowd yelagana on 21/08/21.
+//  Created by Akhil Mittal on 21/01/22.
 //
 
 import UIKit

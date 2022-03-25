@@ -2,7 +2,7 @@
 //  Validator.swift
 //  S-Life
 //
-//  Created by balabalaji on 18/08/21.
+//  Created by Akhil Mittal on 18/01/22.
 //
 
 import Foundation
@@ -29,8 +29,8 @@ class Validate: NSObject {
             return NetworkReachabilityManager()!.isReachable
     }
     
-    fileprivate static let mockWifiEnabled = false
-    static let SMC_WiFi_Name = "Suzuki_Car_Hotspot"
+    fileprivate static let mockWifiEnabled = true
+    static let SMC_WiFi_Name = "Wifi_Hotspot_Name"
     static func connectedToSMCHotSpot() -> Bool {
         if Validate.mockWifiEnabled {
             return true

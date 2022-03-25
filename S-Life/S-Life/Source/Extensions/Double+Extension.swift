@@ -2,7 +2,7 @@
 //  Double+Extension.swift
 //  S-Life
 //
-//  Created by balabalaji gowd yelagana on 05/09/21.
+//  Created by Akhil Mittal on 05/02/22.
 //
 
 import Foundation
