@@ -19,6 +19,9 @@
 		F797F36C2709EE4E00A5CB4F /* SLifeAlertEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F797F36B2709EE4E00A5CB4F /* SLifeAlertEntity+CoreDataProperties.swift */; };
 		F797F36E2709EE6800A5CB4F /* SLifeAlertEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F797F36D2709EE6800A5CB4F /* SLifeAlertEntity+CoreDataClass.swift */; };
 		F797F3702709EFDA00A5CB4F /* DataAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = F797F36F2709EFDA00A5CB4F /* DataAccess.swift */; };
+		F7A9B25E282694F000685F03 /* ValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A9B25C282694F000685F03 /* ValidatorTests.swift */; };
+		F7A9B262282698BD00685F03 /* BaseViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A9B25F2826989C00685F03 /* BaseViewControllerTests.swift */; };
+		F7A9B26528269A3600685F03 /* SSIDTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A9B26328269A3600685F03 /* SSIDTests.swift */; };
 		F7AEA21926FED4180041B93D /* SAnimatedUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AEA1FB26FED4180041B93D /* SAnimatedUIButton.swift */; };
 		F7AEA21A26FED4180041B93D /* SBorderedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AEA1FC26FED4180041B93D /* SBorderedButton.swift */; };
 		F7AEA21B26FED4180041B93D /* SDayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AEA1FD26FED4180041B93D /* SDayButton.swift */; };
@@ -58,6 +61,16 @@
 		F7EB970726FF9070000D4EC0 /* NearestEvacuationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EB970626FF9070000D4EC0 /* NearestEvacuationVC.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		F7A9B2532826932E00685F03 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F79173EC26B854B700E7DDCB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F79173F326B854B700E7DDCB;
+			remoteInfo = "S-Life";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		30C49C689268D730FC6C66D2 /* Pods-S-Life.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-S-Life.release.xcconfig"; path = "Target Support Files/Pods-S-Life/Pods-S-Life.release.xcconfig"; sourceTree = "<group>"; };
 		6A499B7645C492E338471A49 /* Pods_S_Life.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_S_Life.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,6 +88,10 @@
 		F797F36B2709EE4E00A5CB4F /* SLifeAlertEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SLifeAlertEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		F797F36D2709EE6800A5CB4F /* SLifeAlertEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SLifeAlertEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
 		F797F36F2709EFDA00A5CB4F /* DataAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataAccess.swift; sourceTree = "<group>"; };
+		F7A9B24F2826932E00685F03 /* S-LifeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "S-LifeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7A9B25C282694F000685F03 /* ValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidatorTests.swift; sourceTree = "<group>"; };
+		F7A9B25F2826989C00685F03 /* BaseViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewControllerTests.swift; sourceTree = "<group>"; };
+		F7A9B26328269A3600685F03 /* SSIDTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSIDTests.swift; sourceTree = "<group>"; };
 		F7AEA1FB26FED4180041B93D /* SAnimatedUIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAnimatedUIButton.swift; sourceTree = "<group>"; };
 		F7AEA1FC26FED4180041B93D /* SBorderedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBorderedButton.swift; sourceTree = "<group>"; };
 		F7AEA1FD26FED4180041B93D /* SDayButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDayButton.swift; sourceTree = "<group>"; };
@@ -121,6 +138,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				5885E512C3D5AB423C34D225 /* Pods_S_Life.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7A9B24C2826932E00685F03 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,6 +252,7 @@
 			isa = PBXGroup;
 			children = (
 				F79173F626B854B700E7DDCB /* S-Life */,
+				F7A9B2502826932E00685F03 /* S-LifeTests */,
 				F79173F526B854B700E7DDCB /* Products */,
 				8DD866C378900CC993D67284 /* Pods */,
 				C7BFE3FA2C4F933DE3FEE649 /* Frameworks */,
@@ -238,6 +263,7 @@
 			isa = PBXGroup;
 			children = (
 				F79173F426B854B700E7DDCB /* S-Life.app */,
+				F7A9B24F2826932E00685F03 /* S-LifeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -281,6 +307,16 @@
 				F797F36D2709EE6800A5CB4F /* SLifeAlertEntity+CoreDataClass.swift */,
 			);
 			path = CoreDataModelClass;
+			sourceTree = "<group>";
+		};
+		F7A9B2502826932E00685F03 /* S-LifeTests */ = {
+			isa = PBXGroup;
+			children = (
+				F7A9B25C282694F000685F03 /* ValidatorTests.swift */,
+				F7A9B25F2826989C00685F03 /* BaseViewControllerTests.swift */,
+				F7A9B26328269A3600685F03 /* SSIDTests.swift */,
+			);
+			path = "S-LifeTests";
 			sourceTree = "<group>";
 		};
 		F7AEA1FA26FED4180041B93D /* CustomClasses */ = {
@@ -409,18 +445,40 @@
 			productReference = F79173F426B854B700E7DDCB /* S-Life.app */;
 			productType = "com.apple.product-type.application";
 		};
+		F7A9B24E2826932E00685F03 /* S-LifeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F7A9B2552826932E00685F03 /* Build configuration list for PBXNativeTarget "S-LifeTests" */;
+			buildPhases = (
+				F7A9B24B2826932E00685F03 /* Sources */,
+				F7A9B24C2826932E00685F03 /* Frameworks */,
+				F7A9B24D2826932E00685F03 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F7A9B2542826932E00685F03 /* PBXTargetDependency */,
+			);
+			name = "S-LifeTests";
+			productName = "S-LifeTests";
+			productReference = F7A9B24F2826932E00685F03 /* S-LifeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		F79173EC26B854B700E7DDCB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1250;
+				LastSwiftUpdateCheck = 1330;
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
 					F79173F326B854B700E7DDCB = {
 						CreatedOnToolsVersion = 12.5.1;
 						LastSwiftMigration = 1300;
+					};
+					F7A9B24E2826932E00685F03 = {
+						CreatedOnToolsVersion = 13.3.1;
+						TestTargetID = F79173F326B854B700E7DDCB;
 					};
 				};
 			};
@@ -438,6 +496,7 @@
 			projectRoot = "";
 			targets = (
 				F79173F326B854B700E7DDCB /* S-Life */,
+				F7A9B24E2826932E00685F03 /* S-LifeTests */,
 			);
 		};
 /* End PBXProject section */
@@ -459,6 +518,13 @@
 				F7AEA24126FEDB250041B93D /* Montserrat-Regular.ttf in Resources */,
 				F7EB96F826FF3601000D4EC0 /* AlertTableViewCell.xib in Resources */,
 				F7AEA23E26FEDB250041B93D /* Montserrat-Thin.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7A9B24D2826932E00685F03 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -550,7 +616,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F7A9B24B2826932E00685F03 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7A9B25E282694F000685F03 /* ValidatorTests.swift in Sources */,
+				F7A9B262282698BD00685F03 /* BaseViewControllerTests.swift in Sources */,
+				F7A9B26528269A3600685F03 /* SSIDTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F7A9B2542826932E00685F03 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F79173F326B854B700E7DDCB /* S-Life */;
+			targetProxy = F7A9B2532826932E00685F03 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		F79173FD26B854B700E7DDCB /* Main.storyboard */ = {
@@ -747,6 +831,46 @@
 			};
 			name = Release;
 		};
+		F7A9B2562826932E00685F03 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "mobiapps.s-life.S-LifeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/S-Life.app/S-Life";
+			};
+			name = Debug;
+		};
+		F7A9B2572826932E00685F03 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "mobiapps.s-life.S-LifeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/S-Life.app/S-Life";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -764,6 +888,15 @@
 			buildConfigurations = (
 				F791740926B854B800E7DDCB /* Debug */,
 				F791740A26B854B800E7DDCB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F7A9B2552826932E00685F03 /* Build configuration list for PBXNativeTarget "S-LifeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F7A9B2562826932E00685F03 /* Debug */,
+				F7A9B2572826932E00685F03 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
