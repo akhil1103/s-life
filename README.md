@@ -1,1 +1,1 @@
-# S-Life
+# S-Life: Emergency notification app
