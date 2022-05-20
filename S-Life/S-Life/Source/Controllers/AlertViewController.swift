@@ -51,8 +51,8 @@ class AlertViewController: BaseViewController, LocationManagerDelegate {
     @IBOutlet weak var topSectionCardView: CardView!
     
     
-    var alertsArray = [SLifeAlert]()
-    var newAlert: SLifeAlert?
+    private var alertsArray = [SLifeAlert]()
+    private var newAlert: SLifeAlert?
     
     
     override func viewDidLoad() {

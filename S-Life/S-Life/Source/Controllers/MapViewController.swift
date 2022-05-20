@@ -14,8 +14,8 @@ class MapViewController: BaseViewController, MGLMapViewDelegate {
     @IBOutlet weak var topSpaceToHeaderImageCosntraint: NSLayoutConstraint!
     @IBOutlet weak var topBarHight: NSLayoutConstraint!
     @IBOutlet weak var mapParentView: UIView!
-    var progressView: UIProgressView!
-    var mapView: MGLMapView!
+    private var progressView: UIProgressView!
+    private var mapView: MGLMapView!
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -12,9 +12,9 @@ class NearestEvacuationVC: UIViewController, MGLMapViewDelegate {
     
     @IBOutlet weak var topBarHight: NSLayoutConstraint!
     @IBOutlet weak var mapParentView: UIView!
-    var progressView: UIProgressView!
-    var mapView: MGLMapView!
-    var alert: SLifeAlert?
+    private var progressView: UIProgressView!
+    private var mapView: MGLMapView!
+    public var alert: SLifeAlert?
 
     override func viewDidLoad() {
         super.viewDidLoad()
